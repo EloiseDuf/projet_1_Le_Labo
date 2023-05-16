@@ -35,6 +35,10 @@ margin-bottom: var(--heightInput);
     width: calc(var(--widthContainer) - 5vw); 
     border-radius: calc(var(--heightInput) / 4);
     margin-bottom: calc(var(--heightInput) / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 legend {
@@ -44,7 +48,7 @@ legend {
     padding: calc(var(--fontSizeInput) / 3) var(--fontSizeInput);
 }
 
-input {
+input , #pays {
     width: var(--widthInput);
     height: var(--heightInput);
     border-radius: calc(var(--heightInput) / 4);
@@ -52,6 +56,7 @@ input {
     margin-bottom: calc(var(--heightInput) /4);
     font-size: var(--fontSizeInput);
     text-align: left;
+    padding-left: .5rem;
 }
 
  #option {
@@ -64,3 +69,110 @@ input {
     text-align: center;
 }
 
+#nom-prenom , #code-ville , #tel-pays {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+
+#email {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* input[type="tel"] {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+#adresse {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+textarea {
+    width: 100%;
+    height: 8rem;
+    margin-bottom: calc(var(--heightInput) /3);
+    border-radius: calc(var(--heightInput) / 4);
+}
+
+#check-autorisation{
+    width: 0.8rem;
+    margin-right: 1rem;
+}
+
+label {
+    text-align: justify;
+}
+
+#check-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+#envoyer {
+    min-width: 140px;
+    text-align: center;
+    
+}
+
+
+#localite {
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: var(--heightInput);
+    margin-top: var(--heightInput);
+    width: var(--widthContainer);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+}
+
+#ladresseLabo {
+    width: calc(var(--widthContainer) / 2);
+    text-align: center;
+    border: 1px solid green;
+    /* display: inline-block; */
+}
+
+
+
+iframe {
+   
+    width: calc(var(--widthContainer) / 2.5);
+    height: calc(var(--widthContainer) / 2.5);
+    border-radius: calc(var(--heightInput) / 4);
+    min-width: 250px;
+    min-height: 250px;
+}
+
+#localite p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width:600px) {
+    #localite {
+      
+        flex-direction: row;
+        gap: 25px;
+    } 
+}
