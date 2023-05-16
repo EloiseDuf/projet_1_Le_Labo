@@ -1,3 +1,66 @@
-optgroup {
-    color: black;
+
+:root{
+    --heightInput:2rem;
+    --widthInput: 32vw;
+    --widthContainer:80vw;
+    --fontSizeInput:.8rem;
 }
+
+
+form {
+    width: var(--widthContainer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: calc(var(--widthContainer) / 20);
+    padding: calc(var(--heightInput)/2);
+}
+
+#choix-options {
+width: calc(var(--widthContainer) - 5vw);
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+border-radius: calc(var(--heightInput) / 4);
+margin-bottom: var(--heightInput);
+}
+
+#coordonnees {
+    width: calc(var(--widthContainer) - 5vw); 
+    border-radius: calc(var(--heightInput) / 4);
+    margin-bottom: calc(var(--heightInput) / 3);
+}
+
+legend {
+    font-size: calc(var(--fontSizeInput) * 1.3);
+    border: 1px solid gray;
+    border-radius: calc(var(--heightInput) / 4);
+    padding: calc(var(--fontSizeInput) / 3) var(--fontSizeInput);
+}
+
+input {
+    width: var(--widthInput);
+    height: var(--heightInput);
+    border-radius: calc(var(--heightInput) / 4);
+    margin-top: calc(var(--heightInput) /4);
+    margin-bottom: calc(var(--heightInput) /4);
+    font-size: var(--fontSizeInput);
+    text-align: left;
+}
+
+ #option {
+    width: calc(var(--widthInput) * 1.5);
+    height: var(--heightInput);
+    border-radius: calc(var(--heightInput) / 4);
+    margin-top: calc(var(--heightInput) /4);
+    margin-bottom: calc(var(--heightInput) /4);
+    font-size: var(--fontSizeInput);
+    text-align: center;
+}
+
