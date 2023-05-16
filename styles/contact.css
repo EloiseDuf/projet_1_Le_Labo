@@ -4,6 +4,9 @@
     --widthInput: 32vw;
     --widthContainer:80vw;
     --fontSizeInput:.8rem;
+    --paddingContainer:calc(var(--heightInput)/2);
+    --widthLargeInput:calc(var(--widthContainer) - 2 * var(--paddingContainer));
+    --marginBottom: var(--heightInput);
 }
 
 
@@ -17,7 +20,7 @@ form {
     margin-right: auto;
     border: 1px solid black;
     border-radius: calc(var(--widthContainer) / 20);
-    padding: calc(var(--heightInput)/2);
+    padding: var(--paddingContainer);
 }
 
 #choix-options {
@@ -28,7 +31,7 @@ justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
 border-radius: calc(var(--heightInput) / 4);
-margin-bottom: var(--heightInput);
+margin-bottom: var(--marginBottom);
 }
 
 #coordonnees {
@@ -52,8 +55,8 @@ input , #pays {
     width: var(--widthInput);
     height: var(--heightInput);
     border-radius: calc(var(--heightInput) / 4);
-    margin-top: calc(var(--heightInput) /4);
-    margin-bottom: calc(var(--heightInput) /4);
+    margin-top: calc(var(--marginBottom) /4);
+    margin-bottom: calc(var(--marginBottom) /4);
     font-size: var(--fontSizeInput);
     text-align: left;
     padding-left: .5rem;
@@ -63,8 +66,8 @@ input , #pays {
     width: calc(var(--widthInput) * 1.5);
     height: var(--heightInput);
     border-radius: calc(var(--heightInput) / 4);
-    margin-top: calc(var(--heightInput) /4);
-    margin-bottom: calc(var(--heightInput) /4);
+    margin-top: calc(var(--marginBottom) /4);
+    margin-bottom: calc(var(--marginBottom) /4);
     font-size: var(--fontSizeInput);
     text-align: center;
 }
@@ -82,7 +85,7 @@ input , #pays {
 }
 
 #email {
-    width: 95%;
+    width: var(--widthLargeInput);
     margin-left: auto;
     margin-right: auto;
 }
@@ -94,16 +97,17 @@ input , #pays {
 } */
 
 #adresse {
-    width: 95%;
+    width: var(--widthLargeInput);
     margin-left: auto;
     margin-right: auto; 
 }
 
 textarea {
-    width: 100%;
+    width: var(--widthLargeInput);
     height: 8rem;
-    margin-bottom: calc(var(--heightInput) /3);
-    border-radius: calc(var(--heightInput) / 4);
+    margin-bottom: calc(var(--marginBottom) /3);
+    border-radius: calc(var(--marginBottom) / 4);
+    font-size: var(--fontSizeInput);
 }
 
 #check-autorisation{
@@ -113,6 +117,7 @@ textarea {
 
 label {
     text-align: justify;
+    font-size: calc(var(--fontSizeInput) * 1.2);
 }
 
 #check-label {
@@ -133,8 +138,8 @@ label {
 #localite {
     margin-left: auto;
     margin-right: auto; 
-    margin-bottom: var(--heightInput);
-    margin-top: var(--heightInput);
+    margin-bottom: var(--marginBottom);
+    margin-top: var(--marginBottom);
     width: var(--widthContainer);
     display: flex;
     flex-wrap: wrap;
@@ -158,21 +163,74 @@ iframe {
     width: calc(var(--widthContainer) / 2.5);
     height: calc(var(--widthContainer) / 2.5);
     border-radius: calc(var(--heightInput) / 4);
-    min-width: 250px;
-    min-height: 250px;
+    min-width: 180px;
+    min-height: 180px;
 }
 
 #localite p {
-    font-size: 1.1rem;
+    font-size: calc(var(--fontSizeInput) * 1.2);
     text-align: center;
 }
 
 
 
 @media screen and (min-width:600px) {
+    :root {
+        --marginBottom:calc(var(--heightInput) * 1.5);
+        --fontSizeInput:1rem;
+        --widthContainer:70vw;
+        --widthInput: 28vw;
+    }
+    
     #localite {
       
         flex-direction: row;
         gap: 25px;
     } 
+
+    #tel-pays {
+        margin-bottom: calc(var(--marginBottom) / 3);
+    }
+
+    
+    
+    
+    iframe {
+       
+        width: calc(var(--widthContainer) / 3);
+        height: calc(var(--widthContainer) / 3);
+        min-width: 200px;
+        min-height: 200px;
+       
+    }
+}
+
+@media screen and (min-width:1000px) {
+    :root {
+        --widthContainer:60vw;
+        --widthInput: 24vw;
+        --heightInput:2.5rem;
+        --marginBottom:calc(var(--heightInput) * 1.5);
+        --fontSizeInput:1.1rem;
+    }
+    
+    #localite {
+      
+        flex-direction: row;
+        gap: 25px;
+    } 
+
+    #tel-pays {
+        margin-bottom: calc(var(--marginBottom) / 3);
+    }
+
+
+    iframe {
+       
+        width: calc(var(--widthContainer) / 3);
+        height: calc(var(--widthContainer) / 3);
+        min-width: 250px;
+        min-height: 250px;
+       
+    }
 }
