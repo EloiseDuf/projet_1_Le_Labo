@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a href="#" class="logo">Le Labo</a>
+          <div class="nav-links">
+            <ul>
+              <li class="active"><a href="#">Accueil</a></li>
+              <li><a href="#">Histoire</a></li>
+              <li><a href="#">L'équipe</a></li>
+              <li><a href="#">Témoignages</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <img
+            src="assets/img/menu-btn.png"
+            alt="menu-hamburger"
+            class="menu-hamburger"
+          />
+        </nav>
+      </header>
+    <section class="history">    
+            <h1>Notre histoire</h1>
+            <div class="indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="../Pictures/clinique_futur.jpg" alt=""> 
+             
+    </section> 
+     <section class="team">
+            <h1>Rencontrez notre équipe</h1>
+        <div class="indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+            <img src="../Pictures/team.jpg" alt="">
+    </section>
+    <section class="testimonials">
+            <h1>Nos clients témoignent</h1>
+            <div class="indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="../Pictures/temoignages.jpg" alt=""> 
+    </section>
+    <section class="contact">
+            <h1>Vivez vos rêves</h1>
+            <div class="indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img src="../Pictures/cornes_branchies.jpg" alt="">
+    </section>
+  <footer>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda fuga odit explicabo itaque, quaerat ut id vero temporibus natus quasi mollitia modi sint laboriosam perferendis similique magnam sit amet fugit!</p>
+  </footer>
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuHamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-menu");
+    });
+  </script>
+</html>
