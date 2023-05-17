@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="styleSheet" href="../styles/devis.css" />
+    <script type="module" src="../javascript/devis.js"></script>
     <title>Devis</title>
 </head>
 <body>
@@ -18,17 +19,17 @@
             </div>
 
             <div>
-                <p>Nom Prenom client</p>
-                <p>5 rue bla bla</p>
-                <p> code postal - ville</p>
-                <p>Pays</p>
+                <p id="nomPrenom">Nom Prenom client</p>
+                <p id="adresse">5 rue bla bla</p>
+                <p id="code-ville"> code postal - ville</p>
+                <p id="pays">Pays</p>
             </div>
 
         </section>
 
         <section id="date-devis">
-            <p>Date du devis</p>
-            <h1>Devis N°</h1>
+            <p id="dateDevis">Date du devis</p>
+            <h1 id="numDevis">Devis N°</h1>
         </section>
 
         <section id="prix">
@@ -39,18 +40,7 @@
                     <th>Quantité</th>
                     <th>Prix HT<br>(gill)</th>
                 </tr>
-                <tr>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                </tr>
-                <tr>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                    <td>xxx</td>
-                </tr>
+                
 
             </table>
 
@@ -70,7 +60,7 @@
 
             <p>Conditions de règlement : par chèque, carte bleue ou par virement bancaire.</p>
             <p>Acompte de 30% à payer la commande</p>
-            <p id="signature-client"><strong>Signature du client</strong> précédé de la mention "Lu et approuvé" :</p>
+            <p id="signature-client"><strong>Signature du client</strong> <br>précédé de la mention "Lu et approuvé" :</p>
             <div></div>
         </section>
 

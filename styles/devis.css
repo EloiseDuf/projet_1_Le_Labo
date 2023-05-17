@@ -1,7 +1,7 @@
 :root{
     --heightInput:2rem;
     --widthContainer:90vw;
-    --fontSizeInput:calc(var(--widthContainer)/24);
+    --fontSizeInput:calc(var(--widthContainer)/28);
     --paddingContainer:calc(var(--widthContainer) / 25);
     --widthLargeInput:calc(var(--widthContainer) - 2 * var(--paddingContainer));
     --marginBottom: calc(var(--widthContainer) / 18);

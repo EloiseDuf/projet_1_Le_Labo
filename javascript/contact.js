@@ -381,3 +381,72 @@ function newSelectChange(event) {
     newSelect.addEventListener('change', newSelectChange);
 }
 //------------------------------------------------------------
+
+
+//-------------------------------------------------------------
+//ajout d'évenement sur le bouton envoyer pour générer le devis
+const buttonEnvoyer = document.querySelector("form");
+
+buttonEnvoyer.addEventListener("submit" , (event) =>{
+    event.preventDefault();
+    // alert("Votre message a bien été envoyé. \nVous serez contacté sous 48 heures par nos équipes.");
+
+
+    //récupération dans une variable de toutes les options sélectionnées par le client
+    const optionsClient =document.querySelectorAll('#choix-options select');
+    // console.log(optionsClient);
+    const optionsSelectionnees=[];
+    for(let i=0 ; i < optionsClient.length - 1 ; i++){
+        optionsSelectionnees.push(optionsClient[i].value);
+    }
+    // console.log(optionsSelectionnees);
+
+    //récupération des objets dans data correspondant aux options sélectionneées
+    const objetsOptionsSelectionnees = [];
+    
+    for(let i in optionsSelectionnees){
+        let object = data.find(element => element.option === optionsSelectionnees[i]);
+        objetsOptionsSelectionnees.push(object);
+    }
+
+    // console.log(objetsOptionsSelectionnees);
+
+    //récupérations de toutes les données du formulaire
+    const prenom =document.getElementById('prenom').value;
+    const nom =document.getElementById('nom').value;
+    const email =document.getElementById('email').value;
+    const adresse =document.getElementById('adresse').value;
+    const codePostal =document.getElementById('codePostal').value;
+    const ville =document.getElementById('ville').value;
+    const pays =document.getElementById('pays').value;
+    const tel =document.getElementById('tel').value;
+    // const message =document.getElementById('message').value;
+    // console.log(nom);
+
+    //insersion des données du formulaire dans un objet
+    const donneesFormulaire = {
+        "prenom":prenom,
+        "nom":nom,
+        "email":email,
+        "adresse":adresse,
+        "codePostal":codePostal,
+        "ville":ville,
+        "pays":pays
+    };
+
+    console.log(donneesFormulaire);
+    //stockage des données dans le localStorage pour pouvoir les récupérer dans ma page devis.html
+    localStorage.setItem("objetsOptionsSelectionnees", JSON.stringify(objetsOptionsSelectionnees));
+    localStorage.setItem("donneesFormulaire",JSON.stringify(donneesFormulaire));
+   
+//     const data1=localStorage.getItem("objetsOptionsSelectionnees");
+// const data2=localStorage.getItem("donneesFormulaire");
+// console.log(JSON.parse(data1));
+// console.log(JSON.parse(data2));
+
+    //ouverture de l'onglet devis
+     window.open("../html/devis.html");
+    
+})
+
+//-------------------------------------------------------------------
