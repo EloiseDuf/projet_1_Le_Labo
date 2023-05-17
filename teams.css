@@ -1,0 +1,54 @@
+:root{
+    --darkColor:#00334A;
+    --lightColor:#F8FBF1;
+    --mediumColor:#D9D9D9;
+    --mainColor : #00353F;
+}
+
+main {
+    background-color: var(--lightColor);
+}
+
+h1 {
+    color : var(--lightColor);
+    padding: 50px;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    }
+
+div img {
+    width : 10%;
+}
+
+/* .docteur {
+    color: var(--mainColor);
+} */
+
+.docteur + .rightside {
+    background-color: #BC632E;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 10px;
+}
+
+.docteur + .leftside {
+    background-color: #D7C998;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.docLeft + .docteur:nth-child(odd) {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: right; */
+    color: #ff00f7;
+}
+p {
+    padding: 10px;
+    border: #b1b714;
+    border: 10px;
+}
