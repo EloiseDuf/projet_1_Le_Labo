@@ -16,7 +16,7 @@
     height: 75vh;
     object-fit: cover;
     object-position: center;
-    position: absolute;
+    position: relative;
     overflow:hidden;
 }
 
@@ -115,5 +115,6 @@
 
 footer{
     background-color: #00353F;
+    width: 100%;
     z-index: 3;
 }
