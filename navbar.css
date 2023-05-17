@@ -4,18 +4,13 @@
   margin: 0;
 }
 
-body {
-  background-color: #e5bc1a;
-}
 .navbar {
-  position: absolute;
-  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: #00353f;
   font-size: 20px;
 }
 
@@ -23,11 +18,6 @@ body {
   color: white;
   list-style: none;
   text-decoration: none;
-}
-
-.navbar .logo {
-  font-size: 2em;
-  font-weight: bold;
 }
 
 .navbar .nav-links ul {
@@ -42,11 +32,13 @@ body {
 .navbar a:hover {
   color: #e5bc1a;
 }
-
+a.active {
+  background: red;
+}
 .navbar .menu-hamburger {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 35px;
   right: 30px;
   width: 35px;
 }
@@ -55,11 +47,8 @@ body {
   .navbar {
     padding: 0;
   }
-
-  .navbar .logo {
-    position: absolute;
-    top: 40px;
-    left: 30px;
+  .navbar a {
+    color: #fff;
   }
 
   .navbar .menu-hamburger {
@@ -70,7 +59,8 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    background-color: #ccc;
+    background-color: #00353b;
+    /*opacity: 0.8;*/
     backdrop-filter: blur(8px);
     width: 100%;
     height: 100vh;
@@ -79,6 +69,8 @@ body {
     align-items: center;
     margin-left: -100%;
     transition: all 0.5s ease;
+    background-image: url(assets/img/Lelabo3.png);
+    background-repeat: no-repeat;
   }
 
   .nav-links.mobile-menu {
