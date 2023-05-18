@@ -13,11 +13,11 @@
 }
 .history img, .team img, .testimonials img, .contact img{
     width:100%;
-    height: 75vh;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     position: relative;
-    overflow:hidden;
+    /* overflow:hidden; */
 }
 
 /*
@@ -46,19 +46,23 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 4em;
+    bottom: 5.5em;
     width: 100%;  
     z-index:2;
     color:white;
     font-size: 1.5rem;
-    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black;
 }
 
+.baliseIndicator{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .indicator{
     position: absolute;
-    display: flex;
+    bottom: 2.8em;
     margin-top: 22%;
-    margin-left: 49%;
     width: 40px;
     height: 40px;
     transform: rotate(45deg);
@@ -92,7 +96,6 @@
 }
 
 .indicator span:nth-child(3){
-
     top: 0px;
     left: 0px;
     animation-delay: 1.4s;
@@ -116,5 +119,24 @@
 footer{
     background-color: #00353F;
     width: 100%;
-    z-index: 3;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+
+}
+
+footer img{
+    margin:0.5em 1em 0.5em 1em;
+    width: 2em;
+}
+
+footer p{
+    display:inline-block ;
+}
+
+.footerContact{
+   color:white;
+   display: flex;
+   align-items: center; 
 }
