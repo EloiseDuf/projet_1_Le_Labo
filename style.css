@@ -116,6 +116,8 @@
     }
 }
 
+/*footer*/
+
 footer{
     background-color: #00353F;
     width: 100%;
@@ -128,7 +130,7 @@ footer{
 
 footer img{
     margin:0.5em 1em 0.5em 1em;
-    width: 2em;
+    width: 10%;
 }
 
 footer p{
@@ -138,5 +140,19 @@ footer p{
 .footerContact{
    color:white;
    display: flex;
-   align-items: center; 
+   align-items: center;
+   font-size: 100%; 
+}
+
+@media screen and (max-width: 900px){
+    .footerContact:first-child{
+        justify-content: center;
+    }
+
+    footer img{
+        margin:0.5em 0.5em 0.5em 0.5em;
+        width: 10%;
+    }
+
+
 }
