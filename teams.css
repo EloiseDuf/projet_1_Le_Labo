@@ -67,28 +67,9 @@ h1 {    /* Mise en forme du titre */
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* width: 75vw; Permet d'avoir ce paragraphe de la meme taille que celui de droite*/
-    height: 10vh;
-    
-    /* Mise en pages des docteurs à gauche */
-}
-
-.docteur:nth-child(even) {  /* Mise en pages des docteurs à gauche */
-    /* background-color: #BC632E;
-    border-radius: 10px; */
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin: 0px 0px 20px 0px;
-    height: 400px;
-}
-
-.docteur + h2 {
-justify-content: right;
-}
-
-.docteur > p {
+    border-radius: var(--borderRadiusMain);
     padding: 10px;
+    width: 75vw;
 }
 
 .rightside > p {    /* Mise en forme des paragraphes à droite */
@@ -98,26 +79,9 @@ justify-content: right;
     height: 10vh;
     border-radius: 12px;
 }
-
-.docteur > p {  /* Mise en forme des descriptions </p> */
-    padding: 15px;
-    background-color: #cfd311;  /* test pour voir zone effet, à supprimer */
-    width: 75vw; /* Permet d'avoir ce paragraphe de la meme taille que celui de droite */
-    height: 10vh;
+p {
+    padding: 10px;
+    border: #b1b714;
+    border: 10px;
 }
 
-.poulet {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    height: 400px;
-}
-
-/* .docteur {
-    display: flex;
-    align-items: center;
-}
-
-.doc {
-    height: 100vh;
-} */
