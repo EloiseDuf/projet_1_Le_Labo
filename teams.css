@@ -3,10 +3,12 @@
     --lightColor:#F8FBF1;
     --mediumColor:#D9D9D9;
     --mainColor : #00353F;
+    /* Variable que l'on utilisera sur toute la page */
 }
 
 main {
     background-color: var(--lightColor);
+    /* Determine la couleur de la police sur toute la page */
 }
 
 h1 {
@@ -15,40 +17,82 @@ h1 {
     background-color: var(--mainColor);
     display: flex;
     justify-content: center;
-    }
+    /* Mise en forme du titre */
+}
+
+.leftside, .rightside {
+    color: var(--mainColor); /* Invisible car test en cours ... */
+    background-color: var(--lightColor);
+    padding: 10px;
+    /* Mise en page des titre h2 => nom des docteurs */
+}
+
+.rightside { 
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    color: #ff00f7; /* Pour test, a supprimer */
+    /* Mise en page des nom des docteur (titre h2) de droite à droite */
+}
+
+.leftside { 
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    color: #0cc7e4; /* Pour test, a supprimer */
+    /* Mise en page des nom des docteur (titre h2) de gauche à gauche */
+}
 
 div img {
     width : 10%;
+    border-radius: 12px;
+    /* Resize de la taille des images des docteurs */
 }
 
-/* .docteur {
-    color: var(--mainColor);
-} */
-
 .docteur + .rightside {
-    background-color: #BC632E;
+    /* background-color: #BC632E; Le fond englobe le texte ET la photo, comme pour les docs à gauche */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 10px;
+    /* Mise en pages des docteurs à droite */
 }
 
-.docteur + .leftside {
+.docteur:nth-child(odd) {
     background-color: #D7C998;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px;
+    /* Mise en pages des docteurs à gauche */
 }
 
-.docLeft + .docteur:nth-child(odd) {
-    /* display: flex;
+.docteur:nth-child(even) {
+    background-color: #BC632E;
+    border-radius: 10px;
+    display: flex;
     flex-direction: row;
-    justify-content: right; */
-    color: #ff00f7;
-}
-p {
+    align-items: center;
     padding: 10px;
-    border: #b1b714;
-    border: 10px;
+    /* Mise en pages des docteurs à gauche */
+}
+
+
+
+
+.rightside > p {
+    padding: 15px;
+    background-color: #BC632E;
+    width: 75vw;
+    height: 10vh;
+    border-radius: 12px;
+    /* Mise en forme des paragraphes à droite */
+}
+
+.leftside > p {
+    padding: 15px;
+    /* background-color: #BC632E;  test pour voir zone effet, à supprimer */
+    /* width: 75vw; Permet d'avoir ce paragraphe de la meme taille que celui de droite
+    height: 10vh; */
+    /* Mise en forme des paragraphes à gauche */
 }
