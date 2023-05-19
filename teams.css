@@ -3,10 +3,11 @@
     --lightColor:#F8FBF1;
     --mediumColor:#D9D9D9;
     --mainColor : #00353F;
+    box-sizing: content-box;
     --borderRadiusMain : 12px;
 }
 
-main {  /* Determine la couleur de la police et du background sur toute la page */
+main {  /* Determine la couleur de la police sur toute la page */
     background-color: var(--lightColor);
 }
 
@@ -18,57 +19,105 @@ h1 {    /* Mise en forme du titre */
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    }
+}
 
-.rightside .imag, .leftside .imag { /* Resize de la taille des images des docteurs */
-    /* width : 10%;
-    border-radius: var(--borderRadiusMain); => Première version du resize, pour memoire*/
-    width : 25%;
+.leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
+    color: var(--mainColor); /* Invisible car test en cours ... */
+    background-color: var(--lightColor); /* pour test */
+    padding: 15px;
+    margin: 20px;
+}
+
+.rightside {    /* Mise en page des nom des docteur (titre h2) de droite à droite */
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: 50px;
+    width: 270px;
+    color: #ff00f7; /* Pour test, a supprimer */
+    background-color: #069fd2;
+}
+
+.leftside {     /* Mise en page des nom des docteur (titre h2) de gauche à gauche */
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 270px;
+    color: #0cc7e4; /* Pour test, a supprimer */
+}
+
+.image {    /* Resize de la taille des images des docteurs */
+    width : 50%;
     border-radius: 12px;
     aspect-ratio: 3/2;
     object-fit: contain;
 }
 
-/* .docteur {
-    color: var(--mainColor);
-} */
-
-.leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
-    color: var(--mainColor); /* Invisible car test en cours ... */
-    background-color: var(--lightColor); 
-    padding: 15px;
-    margin: 20px;
-}
-
-.docteur + .rightside {
-    background-color: #BC632E;
+.docteur + .rightside {   /* Mise en pages des docteurs du coté droit */
+    background-color: #2bc40d; /* Le fond englobe le texte ET la photo, comme pour les docs à gauche */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    border-radius: var(--borderRadiusMain);
-    height: 10vh;
-    width: 75vw;
+    justify-content: right;
 }
 
-.docteur + .leftside {
-    background-color: #D7C998;
+.docteur:nth-child(odd) {   /* Mise en pages des docteurs à gauche */
+    /* background-color: #08f400;
+    border-radius: 10px; */
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: var(--borderRadiusMain);
     padding: 10px;
-    width: 75vw;
+    margin: 0px 0px 20px 0px;
+    height: 400px;
 }
 
-.docLeft + .docteur:nth-child(odd) {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: right; */
-    color: #ff00f7;
+.docteur:nth-child(even) {  /* Mise en pages des docteurs à gauche */
+    /* background-color: #BC632E;
+    border-radius: 10px; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+    height: 400px;
 }
-p {
+
+.docteur + h2 {
+justify-content: right;
+}
+
+.docteur > p {
     padding: 10px;
-    border: #b1b714;
-    border: 10px;
 }
 
+.rightside > p {    /* Mise en forme des paragraphes à droite */
+    padding: 15px;
+    background-color: #BC632E;
+    width: 75vw;
+    height: 10vh;
+    border-radius: 12px;
+}
+
+.docteur > p {  /* Mise en forme des descriptions </p> */
+    padding: 15px;
+    background-color: #cfd311;  /* test pour voir zone effet, à supprimer */
+    width: 75vw; /* Permet d'avoir ce paragraphe de la meme taille que celui de droite */
+    height: 10vh;
+}
+
+.poulet {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    height: 400px;
+}
+
+/* .docteur {
+    display: flex;
+    align-items: center;
+}
+
+.doc {
+    height: 100vh;
+} */
