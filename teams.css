@@ -3,68 +3,67 @@
     --lightColor:#F8FBF1;
     --mediumColor:#D9D9D9;
     --mainColor : #00353F;
+    box-sizing: content-box;
     /* Variable que l'on utilisera sur toute la page */
 }
 
-main {
+main {  /* Determine la couleur de la police sur toute la page */
     background-color: var(--lightColor);
-    /* Determine la couleur de la police sur toute la page */
 }
 
-h1 {
+h1 {    /* Mise en forme du titre */
     color : var(--lightColor);
     padding: 50px;
     background-color: var(--mainColor);
     display: flex;
     justify-content: center;
-    /* Mise en forme du titre */
+    align-items: center;
+    border-radius: 12px;
 }
 
-.leftside, .rightside {
+.leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
     color: var(--mainColor); /* Invisible car test en cours ... */
-    background-color: var(--lightColor);
-    padding: 10px;
-    /* Mise en page des titre h2 => nom des docteurs */
+    background-color: var(--lightColor); /* pour test */
+    padding: 15px;
+    margin: 20px;
 }
 
-.rightside { 
+.rightside {    /* Mise en page des nom des docteur (titre h2) de droite à droite */
     display: flex;
     flex-direction: row;
     justify-content: right;
+    height: 50px;
+    width: 270px;
     color: #ff00f7; /* Pour test, a supprimer */
-    /* Mise en page des nom des docteur (titre h2) de droite à droite */
+    background-color: #069fd2;
 }
 
-.leftside { 
+.leftside {     /* Mise en page des nom des docteur (titre h2) de gauche à gauche */
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    justify-content: center;
+    height: 50px;
+    width: 270px;
     color: #0cc7e4; /* Pour test, a supprimer */
-    /* Mise en page des nom des docteur (titre h2) de gauche à gauche */
 }
 
-div img {
-    /* width : 7%; */
-    max-width: 100px;
-    max-height: 150px;
-    min-width: auto;
-    min-height: 150px;
+.image {    /* Resize de la taille des images des docteurs */
+    width : 50%;
     border-radius: 12px;
-    /* Resize de la taille des images des docteurs */
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
-.docteur + .rightside {
-    /* background-color: #BC632E; Le fond englobe le texte ET la photo, comme pour les docs à gauche */
+.docteur + .rightside {   /* Mise en pages des docteurs du coté droit */
+    background-color: #2bc40d; /* Le fond englobe le texte ET la photo, comme pour les docs à gauche */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    /* Mise en pages des docteurs à droite */
+    justify-content: right;
 }
 
-.docteur:nth-child(odd) {
-    background-color: #D7C998;
-    border-radius: 10px;
-    padding: 10px;
+.docteur:nth-child(odd) {   /* Mise en pages des docteurs à gauche */
+    /* background-color: #08f400;
+    border-radius: 10px; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -74,35 +73,51 @@ div img {
     /* Mise en pages des docteurs à gauche */
 }
 
-.docteur:nth-child(even) {
-    background-color: #BC632E;
-    border-radius: 10px;
+.docteur:nth-child(even) {  /* Mise en pages des docteurs à gauche */
+    /* background-color: #BC632E;
+    border-radius: 10px; */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 10px;
-    width: 75vw;
-    height: 10vh;
-    /* Mise en pages des docteurs à gauche */
+    margin: 0px 0px 20px 0px;
+    height: 400px;
 }
 
+.docteur + h2 {
+justify-content: right;
+}
 
+.docteur > p {
+    padding: 10px;
+}
 
-
-
-.rightside /*=>even*/ > p {
+.rightside > p {    /* Mise en forme des paragraphes à droite */
     padding: 15px;
     background-color: #BC632E;
     width: 75vw;
     height: 10vh;
     border-radius: 12px;
-    /* Mise en forme des paragraphes à droite */
 }
 
-.leftside /*=>*/ odd p {
+.docteur > p {  /* Mise en forme des descriptions </p> */
     padding: 15px;
-    /* background-color: #BC632E;  test pour voir zone effet, à supprimer */
-    /* width: 75vw; Permet d'avoir ce paragraphe de la meme taille que celui de droite*/
+    background-color: #cfd311;  /* test pour voir zone effet, à supprimer */
+    width: 75vw; /* Permet d'avoir ce paragraphe de la meme taille que celui de droite */
     height: 10vh;
-    /* Mise en forme des paragraphes à gauche */
 }
+
+.poulet {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    height: 400px;
+}
+
+/* .docteur {
+    display: flex;
+    align-items: center;
+}
+
+.doc {
+    height: 100vh;
+} */
