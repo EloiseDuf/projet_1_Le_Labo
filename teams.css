@@ -3,34 +3,51 @@
     --lightColor:#F8FBF1;
     --mediumColor:#D9D9D9;
     --mainColor : #00353F;
+    --borderRadiusMain : 12px;
 }
 
-main {
+main {  /* Determine la couleur de la police et du background sur toute la page */
     background-color: var(--lightColor);
 }
 
-h1 {
+h1 {    /* Mise en forme du titre */
     color : var(--lightColor);
     padding: 50px;
     background-color: var(--mainColor);
     display: flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 12px;
     }
 
-div img {
-    width : 10%;
+.rightside .imag, .leftside .imag { /* Resize de la taille des images des docteurs */
+    /* width : 10%;
+    border-radius: var(--borderRadiusMain); => Première version du resize, pour memoire*/
+    width : 25%;
+    border-radius: 12px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
 /* .docteur {
     color: var(--mainColor);
 } */
 
+.leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
+    color: var(--mainColor); /* Invisible car test en cours ... */
+    background-color: var(--lightColor); 
+    padding: 15px;
+    margin: 20px;
+}
+
 .docteur + .rightside {
     background-color: #BC632E;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 10px;
+    border-radius: var(--borderRadiusMain);
+    height: 10vh;
+    width: 75vw;
 }
 
 .docteur + .leftside {
@@ -38,7 +55,9 @@ div img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-radius: var(--borderRadiusMain);
     padding: 10px;
+    width: 75vw;
 }
 
 .docLeft + .docteur:nth-child(odd) {
@@ -52,3 +71,4 @@ p {
     border: #b1b714;
     border: 10px;
 }
+
