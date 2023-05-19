@@ -7,9 +7,10 @@
     --paddingContainer:calc(var(--heightInput)/2);
     --widthLargeInput:calc(var(--widthContainer) - 2 * var(--paddingContainer));
     --marginBottom: var(--heightInput);
-    --darkColor:#00334A;
+    --darkColor:#00353F;
     --lightColor:#F8FBF1;
-    --mediumColor:#D9D9D9;
+    /* --mediumColor:#D9D9D9; */
+    --mediumColor:#ffbf664a;
 
 }
 
@@ -43,13 +44,14 @@ form {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: calc(var(--widthContainer) / 20);
     padding: var(--paddingContainer);
 }
 
 fieldset{
     background-color: var(--mediumColor);
+    border: none;
 }
 
 #choix-options {
@@ -174,6 +176,7 @@ label {
     margin-right: auto; 
     /* margin-bottom: var(--marginBottom); */
     /* margin-top: var(--marginBottom); */
+    background-color: var(--mediumColor);
     width: var(--widthContainer);
     display: flex;
     flex-wrap: wrap;
@@ -247,9 +250,10 @@ iframe {
       
         flex-direction: row;
         gap: 25px;
-        border: 1px solid var(--darkColor);
+        /* border: 1px solid var(--darkColor); */
         border-radius: calc(2 * var(--paddingContainer));
         padding: var(--paddingContainer);
+        background-color: var(--mediumColor);
     } 
 
     #tel-pays {
@@ -299,7 +303,7 @@ iframe {
         justify-content: space-around;
         align-items:center;
         border-radius: var(--paddingContainer);
-        background-color: var(--mediumColor);
+        /* background-color: var(--mediumColor); */
         position: sticky;
         top: 0;
 
