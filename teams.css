@@ -44,7 +44,11 @@ h1 {
 }
 
 div img {
-    width : 10%;
+    /* width : 7%; */
+    max-width: 100px;
+    max-height: 150px;
+    min-width: auto;
+    min-height: 150px;
     border-radius: 12px;
     /* Resize de la taille des images des docteurs */
 }
@@ -60,10 +64,13 @@ div img {
 .docteur:nth-child(odd) {
     background-color: #D7C998;
     border-radius: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
+    /* width: 75vw; Permet d'avoir ce paragraphe de la meme taille que celui de droite*/
+    height: 10vh;
+    
     /* Mise en pages des docteurs à gauche */
 }
 
@@ -71,16 +78,19 @@ div img {
     background-color: #BC632E;
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     padding: 10px;
+    width: 75vw;
+    height: 10vh;
     /* Mise en pages des docteurs à gauche */
 }
 
 
 
 
-.rightside > p {
+
+.rightside /*=>even*/ > p {
     padding: 15px;
     background-color: #BC632E;
     width: 75vw;
@@ -89,10 +99,10 @@ div img {
     /* Mise en forme des paragraphes à droite */
 }
 
-.leftside > p {
+.leftside /*=>*/ odd p {
     padding: 15px;
     /* background-color: #BC632E;  test pour voir zone effet, à supprimer */
-    /* width: 75vw; Permet d'avoir ce paragraphe de la meme taille que celui de droite
-    height: 10vh; */
+    /* width: 75vw; Permet d'avoir ce paragraphe de la meme taille que celui de droite*/
+    height: 10vh;
     /* Mise en forme des paragraphes à gauche */
 }
