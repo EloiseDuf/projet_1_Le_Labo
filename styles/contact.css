@@ -23,10 +23,12 @@ aside {
 
 #texte{
     width: calc(0.8 * var(--widthContainer));
-    font-size: calc(1.1 * var(--fontSizeInput));
+    font-size: calc(1.2 * var(--fontSizeInput));
+    font-style: italic;
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
+    margin-top: var(--marginBottom);
 }
 
 #texte p:nth-child(2) {
@@ -170,8 +172,8 @@ label {
 #localite {
     margin-left: auto;
     margin-right: auto; 
-    margin-bottom: var(--marginBottom);
-    margin-top: var(--marginBottom);
+    /* margin-bottom: var(--marginBottom); */
+    /* margin-top: var(--marginBottom); */
     width: var(--widthContainer);
     display: flex;
     flex-wrap: wrap;
@@ -181,12 +183,6 @@ label {
     gap: 0;
 }
 
-#ladresseLabo {
-    width: calc(var(--widthContainer) / 2);
-    text-align: center;
-    border: 1px solid green;
-    /* display: inline-block; */
-}
 
 
 
@@ -233,6 +229,7 @@ iframe {
         height: calc(var(--widthContainer) / 3);
         min-width: 200px;
         min-height: 200px;
+        border-radius: var(--paddingContainer);
        
     }
 }
@@ -250,6 +247,9 @@ iframe {
       
         flex-direction: row;
         gap: 25px;
+        border: 1px solid var(--darkColor);
+        border-radius: calc(2 * var(--paddingContainer));
+        padding: var(--paddingContainer);
     } 
 
     #tel-pays {
@@ -270,6 +270,7 @@ iframe {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: var(--lightColor);
     }
     aside {
         display: block;
@@ -289,7 +290,7 @@ iframe {
     } */
 
     aside .image-container {
-        margin-top: 65vh;
+        margin-top: 29vh;
         height: 120vh;
         width: 100%;
         /* height: 1fr; */
@@ -308,5 +309,20 @@ iframe {
         width: 80%;
         max-width: 180px;
         border-radius: 5%;
+    }
+
+    #texte{
+        font-size: calc(1.4 * var(--fontSizeInput));
+        
+        /* margin-top: var(--marginBottom); */
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    #texte{
+        font-size: calc(1.5 * var(--fontSizeInput));
+        
+        /* margin-top: var(--marginBottom); */
     }
 }
