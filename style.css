@@ -1,3 +1,12 @@
+:root{
+
+    --darkColor:#00353f;
+    --lightColor:#F8FBF1;
+    --mediumColor:#D9D9D9;
+
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -140,3 +149,124 @@ footer p{
    display: flex;
    align-items: center; 
 }
+
+
+
+
+
+
+
+body{
+    position: relative;
+}
+
+#popup {
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 30vw;
+    top: 15vh;
+    background-color: var(--darkColor);
+
+    animation: transformation 1s;
+    animation-fill-mode: forwards;
+    border: 40px ridge rgb(218, 195, 158);
+    z-index: 7;    
+
+}
+
+@keyframes transformation {
+    0%{
+    transform: scale(0.1);
+    }
+    100%{
+      transform:scale(1);
+    }
+  }
+
+  #buttonPopup {
+    position: absolute;
+    top: 30vw;
+    left: 28vw;
+    width: 80px;
+    height: 60px;
+    clip-path: polygon(0% 42%, 61% 42%, 39% 10%, 100% 52%, 40% 100%, 60% 65%, 0% 65%);
+    cursor: pointer;
+    
+    background:linear-gradient(90deg, rgba(255,255,255,1) 4%, rgba(5,40,79,1) 37%, rgba(255,255,255,1) 39%, rgba(5,40,79,1) 41%, rgba(255,255,255,1) 88%);
+
+    background-clip:content-box;
+    /*add this line, it defines how far the background should extend within an element, here we set it to text */
+
+    -webkit-background-clip: content-box;
+    /* add this line, for browsers compatibility */
+
+    -webkit-text-fill-color: transparent;
+    /* specifies the fill color of text characters. We use transparent to use the background value as our text fill */
+
+    animation: wave 15s  alternate ease infinite;
+    /* add this line */
+    transition: all ease 0.5s ;
+    /* add this line */
+    }
+
+  
+
+
+@keyframes wave {
+ 0% {
+   background-position: 0 0;
+ }
+ 100% {
+   background-position: 35vw 5vh;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+  #buttonPopup:hover {
+    background-color:  rgb(218, 195, 158) ;
+  }
+
+  #popup p {
+    color: var(--lightColor);
+    font-style: italic;
+    font-size: 1.7rem;
+    text-align: center;
+    
+  }
+
+  #popup1 {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+
+
+ #popup #rejoindre {
+    text-align: left;
+    margin-top: 4vw;
+    margin-left: 14vw;
+  }
+
+  #popup div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3vw;
+  }
+
+  #fee {
+    height: 12vw;
+    border-radius: 1vw;
+  }
+
+  #logopopup {
+    height: 6vw;
+  }
