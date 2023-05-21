@@ -3,6 +3,8 @@
     --darkColor:#00353f;
     --lightColor:#F8FBF1;
     --mediumColor:#D9D9D9;
+    --dimensionPopup:0px;
+    --windowHeight:15vh;
 
 }
 
@@ -161,16 +163,18 @@ body{
 }
 
 #popup {
-    width: 40vw;
-    height: 40vw;
+    /* width: 40vw;
+    height: 40vw; */
+    width: var(--dimensionPopup);
+    height: var(--dimensionPopup);
     position: absolute;
-    left: 30vw;
-    top: 15vh;
+    left: calc((100vw - var(--dimensionPopup)) / 2);
+    top: calc((var(--windowHeight) - var(--dimensionPopup)) / 2 + 5vh);
     background-color: var(--darkColor);
 
     animation: transformation 1s;
     animation-fill-mode: forwards;
-    border: 40px ridge rgb(218, 195, 158);
+    border: calc(0.05 * var(--dimensionPopup)) ridge rgb(218, 195, 158);
     z-index: 7;    
 
 }
@@ -186,14 +190,14 @@ body{
 
   #buttonPopup {
     position: absolute;
-    top: 30vw;
-    left: 28vw;
-    width: 80px;
-    height: 60px;
+    top: calc(0.75 * var(--dimensionPopup));;
+    left: calc(0.7 * var(--dimensionPopup));;
+    width: calc(0.18 * var(--dimensionPopup));;
+    height: calc(0.1 * var(--dimensionPopup));;
     clip-path: polygon(0% 42%, 61% 42%, 39% 10%, 100% 52%, 40% 100%, 60% 65%, 0% 65%);
     cursor: pointer;
     
-    background:linear-gradient(90deg, rgba(255,255,255,1) 4%, rgba(5,40,79,1) 37%, rgba(255,255,255,1) 39%, rgba(5,40,79,1) 41%, rgba(255,255,255,1) 88%);
+    background:linear-gradient(90deg, rgb(218, 195, 158) 4%, rgba(5,40,79,1) 37%, rgba(255,255,255,1) 39%, rgba(5,40,79,1) 41%, rgb(218, 195, 158) 88%);
 
     background-clip:content-box;
     /*add this line, it defines how far the background should extend within an element, here we set it to text */
@@ -204,10 +208,12 @@ body{
     -webkit-text-fill-color: transparent;
     /* specifies the fill color of text characters. We use transparent to use the background value as our text fill */
 
-    animation: wave 15s  alternate ease infinite;
+    animation: wave 60s  alternate  infinite;
     /* add this line */
-    transition: all ease 0.5s ;
+    /* transition: all ease 0.5s ; */
     /* add this line */
+
+    transition-timing-function: linear;
     }
 
   
@@ -218,7 +224,7 @@ body{
    background-position: 0 0;
  }
  100% {
-   background-position: 35vw 5vh;
+   background-position: 150vw 5vh;
  }
 }
 
@@ -238,35 +244,43 @@ body{
   #popup p {
     color: var(--lightColor);
     font-style: italic;
-    font-size: 1.7rem;
+    font-size: calc(0.05 * var(--dimensionPopup));
     text-align: center;
     
   }
 
   #popup1 {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: calc(0.075 * var(--dimensionPopup));
+    margin-bottom: calc(0.075 * var(--dimensionPopup));
   }
 
 
  #popup #rejoindre {
     text-align: left;
-    margin-top: 4vw;
-    margin-left: 14vw;
+    margin-top: calc(0.075 * var(--dimensionPopup));
+    margin-left: calc(0.33 * var(--dimensionPopup));
   }
 
   #popup div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 3vw;
+    margin-bottom: calc(0.075 * var(--dimensionPopup));
+    max-width: 95%;
   }
 
+#popup div img {
+    max-width: 45%;
+    height: auto;
+}
+
   #fee {
-    height: 12vw;
-    border-radius: 1vw;
+    max-height: calc(0.3 * var(--dimensionPopup));
+    border-radius: calc(0.025 * var(--dimensionPopup));
+    /* max-width: 45%; */
   }
 
   #logopopup {
-    height: 6vw;
+    max-height: calc(0.15 * var(--dimensionPopup));
+    /* max-width: 45%; */
   }
