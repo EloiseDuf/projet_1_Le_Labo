@@ -5,7 +5,7 @@
 const data=[
     {
         "option":"Oeil bionique",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir1",
         "prix":5000,
         "forfaitChirurgien":1000
@@ -13,7 +13,7 @@ const data=[
     ,
     {
         "option":"Oeil mécanique",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir1",
         "prix":7500,
         "forfaitChirurgien":1000
@@ -21,7 +21,7 @@ const data=[
     ,
     {
         "option":"Oeil de chat",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir2",
         "prix":3000,
         "forfaitChirurgien":800
@@ -29,7 +29,7 @@ const data=[
     ,
     {
         "option":"Oeil de mouche",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir2",
         "prix":4500,
         "forfaitChirurgien":800
@@ -37,7 +37,7 @@ const data=[
     ,
     {
         "option":"Oeil de guêpe",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir2",
         "prix":3500,
         "forfaitChirurgien":800
@@ -45,7 +45,7 @@ const data=[
     ,
     {
         "option":"Gros yeux",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir2",
         "prix":7800,
         "forfaitChirurgien":800
@@ -53,7 +53,7 @@ const data=[
     ,
     {
         "option":"Yeux derrière la tête",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir2",
         "prix":10500,
         "forfaitChirurgien":800
@@ -61,7 +61,7 @@ const data=[
     ,
     {
         "option":"Yeux tentacules(x8)",
-        "categorie":"yeux",
+        "categorie":"Yeux",
         "chirurgien":"chir2",
         "prix":23000,
         "forfaitChirurgien":800
@@ -69,7 +69,7 @@ const data=[
     ,
     {
         "option":"Bras bionique",
-        "categorie":"bras",
+        "categorie":"Bras",
         "chirurgien":"chir1",
         "prix":18000,
         "forfaitChirurgien":1000
@@ -77,7 +77,7 @@ const data=[
     ,
     {
         "option":"Bras mécanique",
-        "categorie":"bras",
+        "categorie":"Bras",
         "chirurgien":"chir1",
         "prix":28000,
         "forfaitChirurgien":1000
@@ -85,7 +85,7 @@ const data=[
     ,
     {
         "option":"Bras extensible",
-        "categorie":"bras",
+        "categorie":"Bras",
         "chirurgien":"chir3",
         "prix":18000,
         "forfaitChirurgien":1200
@@ -93,7 +93,7 @@ const data=[
     ,
     {
         "option":"Bras écran",
-        "categorie":"bras",
+        "categorie":"Bras",
         "chirurgien":"chir1",
         "prix":15000,
         "forfaitChirurgien":1000
@@ -101,7 +101,7 @@ const data=[
     ,
     {
         "option":"Bras amovible",
-        "categorie":"bras",
+        "categorie":"Bras",
         "chirurgien":"chir1",
         "prix":33000,
         "forfaitChirurgien":1000
@@ -133,7 +133,7 @@ const data=[
     ,
     {
         "option":"Jambe écran",
-        "categorie":"bras",
+        "categorie":"Bras",
         "chirurgien":"chir1",
         "prix":15000,
         "forfaitChirurgien":1000
@@ -157,7 +157,7 @@ const data=[
     ,
     {
         "option":"Corne de démon",
-        "categorie":"corne",
+        "categorie":"Corne",
         "chirurgien":"chir4",
         "prix":8000,
         "forfaitChirurgien":700
@@ -165,7 +165,7 @@ const data=[
     ,
     {
         "option":"Corne de licorne",
-        "categorie":"corne",
+        "categorie":"Corne",
         "chirurgien":"chir4",
         "prix":7000,
         "forfaitChirurgien":700
@@ -173,7 +173,7 @@ const data=[
     ,
     {
         "option":"Corne de cerf",
-        "categorie":"corne",
+        "categorie":"Corne",
         "chirurgien":"chir4",
         "prix":15000,
         "forfaitChirurgien":700
@@ -181,7 +181,7 @@ const data=[
     ,
     {
         "option":"Corne de rhinocéros",
-        "categorie":"corne",
+        "categorie":"Corne",
         "chirurgien":"chir4",
         "prix":9000,
         "forfaitChirurgien":700
