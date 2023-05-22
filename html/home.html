@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <img id="logo" src="Pictures/Lelabo3.png" alt="Le Labo" />
+        <div class="nav-links">
+          <ul>
+            <li class="active"><a href="#">Accueil</a></li>
+            <li><a href="#">Histoire</a></li>
+            <li><a href="#">L'équipe</a></li>
+            <li><a href="#">Témoignages</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <img
+          src="assets/img/menu-btn.png"
+          alt="menu-hamburger"
+          class="menu-hamburger"
+        />
+      </nav>
+      </header>
+    <section class="history">    
+      <div class="baliseH1">
+        <h1>Notre histoire</h1>
+      </div>
+      <div class="baliseIndicator">
+        <div class="indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <img src="Pictures/clinique_futurV2.png" alt="futur clinique"> 
+    </section> 
+    <section class="team">
+      <div class="baliseH1">
+        <h1>Rencontrez notre équipe</h1>
+      </div>
+      <div class="baliseIndicator">
+        <div class="indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <img src="../Pictures/team.jpg" alt="">
+    </section>
+    <section class="testimonials">
+      <div class="baliseH1">
+        <h1>Nos clients témoignent</h1>
+      </div>
+      <div class="baliseIndicator">
+        <div class="indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <img src="../Pictures/temoignages.jpg" alt=""> 
+    </section>
+    <section class="contact">
+      <div class="baliseH1">
+        <h1>Vivez vos rêves</h1>
+      </div>
+      <div class="baliseIndicator">
+        <div class="indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <img src="../Pictures/cornes_branchies.jpg" alt="">
+    </section>
+  <footer>
+    <div>
+      <img src="Pictures/icons8-instagram.svg" alt="icone instagram">
+      <img src="Pictures/icons8-tic-tac.svg" alt="icone tic tac">
+      <img src="Pictures/icons8-facebook-nouveau.svg" alt="icone facebook">
+      <img src="Pictures/icons8-twitter.svg" alt="icone twitter">
+    </div>
+    <div class="footerContact">
+      <p>Contactez nous !</p>
+      <img src="Pictures/icons8-ici-50.png" alt="icone here">
+    </div>
+  </footer> 
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuHamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-menu");
+    });
+  </script>
+</html>
