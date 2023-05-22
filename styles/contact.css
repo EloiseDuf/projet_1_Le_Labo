@@ -30,6 +30,7 @@ aside {
     margin-left: auto;
     margin-right: auto;
     padding-top: var(--marginBottom);
+    margin-bottom: var(--marginBottom) ;
 }
 
 #texte p:nth-child(2) {
@@ -174,7 +175,7 @@ label {
 #localite {
     margin-left: auto;
     margin-right: auto; 
-    /* margin-bottom: var(--marginBottom); */
+    margin-bottom: var(--marginBottom);
     /* margin-top: var(--marginBottom); */
     background-color: var(--mediumColor);
     border-radius: calc(2 * var(--paddingContainer));
@@ -323,7 +324,7 @@ iframe {
 
     #texte{
         font-size: calc(1.4 * var(--fontSizeInput));
-        
+        /* width: calc(1.2 * var(--widthContainer)); */
         /* margin-top: var(--marginBottom); */
     }
 }
