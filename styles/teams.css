@@ -1,7 +1,7 @@
 :root{/* Variable que l'on utilisera sur toute la page */
     --darkColor:#00334A;
     --lightColor:#F8FBF1;
-    --mediumColor:#D9D9D9;
+    --mediumColor:#ffbf664a;
     --mainColor : #00353F;
     box-sizing: content-box;
     --borderRadiusMain : 12px;
@@ -18,7 +18,7 @@ h1 {    /* Mise en forme du titre */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: var(--borderRadiusMain);
 }
 
 .leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
@@ -32,9 +32,9 @@ h1 {    /* Mise en forme du titre */
     display: flex;
     flex-direction: row;
     justify-content: right;
+    align-items: center;
     height: 50px;
-    width: 270px;
-    color: #ff00f7; /* Pour test, a supprimer */
+    /* color: #ff00f7; Pour test, a supprimer */
     background-color: #069fd2;
 }
 
@@ -85,6 +85,7 @@ h1 {    /* Mise en forme du titre */
 
 .docteur + h2 {
 justify-content: right;
+background-color: #cfd311;
 }
 
 .docteur > p {
