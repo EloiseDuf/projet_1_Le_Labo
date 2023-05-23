@@ -1,14 +1,9 @@
 :root{
-
-    --darkColor:#00353f;
-    --lightColor:#F8FBF1;
+    --lightColor:#00353f;
     --mediumColor:#D9D9D9;
     --dimensionPopup:0px;
     --windowHeight:15vh;
-
 }
-
-
 
 
 body{
@@ -23,11 +18,14 @@ body{
     position: absolute;
     left: calc((100vw - var(--dimensionPopup)) / 2);
     top: calc((var(--windowHeight) - var(--dimensionPopup)) / 2 + 5vh);
-    background-color: var(--darkColor);
-
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.2px);
+    -webkit-backdrop-filter: blur(12.2px);
+    border: 20px solid rgba(255, 255, 255, 0.3);
     animation: transformation 1s;
     animation-fill-mode: forwards;
-    border: calc(0.05 * var(--dimensionPopup)) ridge rgb(218, 195, 158);
     z-index: 7;    
 
 }
@@ -124,6 +122,12 @@ body{
     justify-content: space-around;
     margin-bottom: calc(0.075 * var(--dimensionPopup));
     max-width: 95%;
+    background: rgba(0, 53, 63, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.2px);
+    -webkit-backdrop-filter: blur(12.2px);
+
   }
 
 #popup div img {
