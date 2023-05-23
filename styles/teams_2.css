@@ -1,0 +1,119 @@
+:root {/* Variable que l'on utilisera sur toute la page */
+    --darkColor:#00334A;
+    --lightColor:#F8FBF1;
+    --mainColor : #00353F;
+    --borderRadiusMain : 12px;
+    --colorDocRight : #BC632E;
+    --colorDocLeft : #FFBF66;
+}
+
+main {  /* Determine les paramètres valables sur toute la page */
+    background-color: var(--lightColor);
+}
+
+/* Mise en forme des titres */
+
+h1 {    /* Mise en forme du h1 */
+    color : var(--lightColor);
+    padding: 50px;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadiusMain);
+    margin: 20px;
+}
+
+#right {    /* Mise en forme des h2 des docteurs à droite */
+    display: flex;
+    flex-direction: row-reverse;
+    padding : 10px 25px 10px 0px;
+    color: var(--mainColor);
+}
+
+#left { /* Mise en forme des h2 des docteurs à gauche */
+    display: flex;
+    flex-direction: row;
+    padding : 10px 0px 10px 25px;
+    color: var(--mainColor);
+}
+
+/* Mise en page des docteurs à gauche */
+.docteur-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: no-wrap;
+    margin: 10px;
+    background-color: var(--colorDocLeft);
+    border-radius: var(--borderRadiusMain);
+}
+
+.docteur-left img {
+    width: 200px;
+    height: auto;
+    border-radius: var(--borderRadiusMain);
+}
+
+.docteur-left p {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 75vw;
+    padding-left: 10px;
+}
+
+/* mise en page des docteurs à droite */
+.docteur-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: no-wrap;
+    margin: 10px;
+}
+
+.docteur-right img {
+    width: 200px;
+    height: auto;
+    min-height: 270px;
+    border-radius: var(--borderRadiusMain);
+}
+
+.docteur-right p {
+    background-color: var(--colorDocRight);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 250px;
+    width: 57vw;
+    padding-right: 10px;
+    border-top-left-radius: var(--borderRadiusMain);
+    border-bottom-left-radius: var(--borderRadiusMain);
+}
+
+/*footer*/
+
+footer {
+    background-color: #00353F;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+footer img {
+    margin:0.5em 1em 0.5em 1em;
+    width: 10%;
+}
+
+footer p {
+    display:inline-block ;
+}
+
+.footerContact {
+   color:white;
+   display: flex;
+   align-items: center;
+   font-size: 100%; 
+}

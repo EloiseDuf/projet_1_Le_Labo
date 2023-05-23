@@ -19,13 +19,16 @@ h1 {    /* Mise en forme du titre */
     justify-content: center;
     align-items: center;
     border-radius: var(--borderRadiusMain);
+    margin: 20px;
 }
 
-.leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
+/* Mise en page des titre h2 des docteurs (gauche et droite) */
+
+.leftside, .rightside {     /* Mise en page globale des titre h2 */
     color: var(--mainColor); /* Invisible car test en cours ... */
     background-color: var(--lightColor); /* pour test */
     padding: 15px;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .rightside {    /* Mise en page des nom des docteur (titre h2) de droite à droite */
@@ -51,6 +54,14 @@ h1 {    /* Mise en forme du titre */
     border-radius: 12px;
     aspect-ratio: 3/2;
     object-fit: contain;
+    margin: 20px 0px;
+}
+
+.docteur {
+    display: flex;
+    justify-content: flex-start;
+    /* flex-wrap: wrap;  */
+    align-items: center;
 }
 
 .docteur + .rightside {   /* Mise en pages des docteurs du coté droit */
@@ -62,8 +73,8 @@ h1 {    /* Mise en forme du titre */
 }
 
 .docteur:nth-child(odd) {   /* Mise en pages des docteurs à gauche */
-    /* background-color: #08f400;
-    border-radius: 10px; */
+    /* background-color: #08f400; */
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -74,10 +85,11 @@ h1 {    /* Mise en forme du titre */
 }
 
 .docteur:nth-child(even) {  /* Mise en pages des docteurs à gauche */
-    /* background-color: #BC632E;
-    border-radius: 10px; */
+    /* background-color: #BC632E; */
+    border-radius: 10px;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-start;
     align-items: center;
     margin: 0px 0px 20px 0px;
     height: 400px;
@@ -101,24 +113,62 @@ background-color: #cfd311;
 }
 
 .docteur > p {  /* Mise en forme des descriptions </p> */
+    
     padding: 15px;
     background-color: #cfd311;  /* test pour voir zone effet, à supprimer */
     width: 75vw; /* Permet d'avoir ce paragraphe de la meme taille que celui de droite */
-    height: 10vh;
+    /*height: 10vh;*/
+
 }
 
 .poulet {
     display: flex;
     flex-direction: column;
     justify-content: right;
-    height: 400px;
+    /* height: 400px; */
+    align-items: flex-start;
 }
 
-/* .docteur {
-    display: flex;
-    align-items: center;
-}
-
-.doc {
+/* .doc {
     height: 100vh;
 } */
+
+/*footer*/
+
+footer{
+    background-color: #00353F;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+
+}
+
+footer img{
+    margin:0.5em 1em 0.5em 1em;
+    width: 10%;
+}
+
+footer p{
+    display:inline-block ;
+}
+
+.footerContact{
+   color:white;
+   display: flex;
+   align-items: center;
+   font-size: 100%; 
+}
+
+@media screen and (max-width: 900px){
+    .footerContact:first-child{
+        justify-content: center;
+    }
+
+    footer img{
+        margin:0.5em 0.5em 0.5em 0.5em;
+        width: 10%;
+    }
+
+}
