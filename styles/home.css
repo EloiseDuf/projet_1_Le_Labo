@@ -6,36 +6,40 @@
     box-sizing: border-box;
 }
 
+.history{
+    background-image: url("/img/clinique_futurV2.png");
+}
+
+.team{
+    background-image: url("/img/team.jpg");
+}
+
+.testimonials{
+    background-image: url("/img/temoignages.jpg");
+}
+
+.contact{
+    background-image: url("/img/cornes_branchies.jpg");
+}
+
 .history, .team, .testimonials, .contact{
     position: relative;
-    height: 30em;
+    height: 40em;
     width: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .history img, .team img, .testimonials img, .contact img{
     width:100%;
     height: 100%;
-    object-fit: cover;
     /*object-position: center;
-    /*position: relative;*/
-    position: relative;
+    /*position: relative;*/ 
+    object-fit: cover; 
   }
- 
-    /* overflow:hidden; */
-}
-
-img:hover {
-    -webkit-transform: translateY(130px);
-    transform: translateY(130px);
-}
-
-.slideHistory{
-    width: 100%;
-    height: 3rem;
-    background-color: #00353f;
-    z-index: 6;
-}
-
+    
 /*
 .button{
     display: flex;
@@ -186,6 +190,72 @@ footer img:hover{
 }
 
 @media screen and (max-width: 900px){
+
+    .history, .team, .testimonials, .contact{
+        position: relative;
+        height: 30em;
+        width: auto;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .baliseH1 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        bottom: 5em;
+        width: 100%;  
+        z-index:2;
+        color:#00353f;
+        /*font-family: Arial,Helvetica,sans-serif;*/
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7rem;
+        /*text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black;*/
+    }
+    
+    .baliseH1 h1{
+        background: rgba(255, 255, 255, 0.67);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.9px);
+        -webkit-backdrop-filter: blur(7.9px);
+        border: 1px solid rgba(255, 255, 255, 1);
+        z-index:3;
+        padding:0.5rem;   
+    }
+
+    .indicator{
+        position: absolute;
+        bottom: 1em;
+        margin-top: 22%;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        z-index:2;
+    }
+
+    .indicator span:nth-child(1){
+        top: -15px;
+        left: -15px;
+        animation-delay: 1s;
+    }
+    
+    .indicator span:nth-child(2){
+        top: -7px;
+        left: -7px;
+        animation-delay: 1.2s;
+    }
+    
+    .indicator span:nth-child(3){
+        top: 0px;
+        left: 0px;
+        animation-delay: 1.4s;
+    }
+
+
     .footerContact:first-child{
         justify-content: center;
     }
@@ -194,5 +264,4 @@ footer img:hover{
         margin:0.5em 0.5em 0.5em 0.5em;
         width: 10%;
     }
-
 }
