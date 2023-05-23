@@ -141,6 +141,7 @@ textarea {
     height: 8rem;
     margin-bottom: calc(var(--marginBottom) /3);
     border-radius: calc(var(--marginBottom) / 4);
+    padding: 8px;
     font-size: var(--fontSizeInput);
 }
 

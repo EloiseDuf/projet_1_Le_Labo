@@ -18,6 +18,7 @@
   box-sizing: border-box;
   background-color: #00353f;
   font-size: 20px;
+  
 }
 
 .navbar a {
@@ -85,7 +86,9 @@ a.active {
 
   .nav-links.mobile-menu {
     margin-left: 0;
+
     z-index: 3;
+
   }
 
   .nav-links ul {
