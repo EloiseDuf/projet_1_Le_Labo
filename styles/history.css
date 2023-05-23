@@ -18,15 +18,45 @@
     
 }
 .fondateur{
-    display:inline-block;
+    display:flex;
+    flex-direction: row;
+    text-align: justify;
     vertical-align: top; 
     height: 250px;
 
 }
 .année{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     text-align: justify;
     vertical-align: top;
     height: 200px;
     
+}
+/*footer*/
+
+footer{
+    background-color: #00353F;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+
+}
+
+footer img{
+    margin:0.5em 1em 0.5em 1em;
+    width: 10%;
+}
+
+footer p{
+    display:inline-block ;
+}
+
+.footerContact{
+   color:white;
+   display: flex;
+   align-items: center;
+   font-size: 100%; 
 }
