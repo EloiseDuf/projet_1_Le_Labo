@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 /*------------------------------footer------------------------*/
 
@@ -95,8 +96,9 @@ a.active {
 
 main {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
+  max-width: 95vw;
 }
 
 .slider {
