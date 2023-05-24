@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,43 +8,41 @@
 }
 /*------------------------------footer------------------------*/
 
-footer{
-  background-color: #00353F;
+footer {
+  background-color: #00353f;
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 0 2em;
   margin-top: 2em;
-
 }
 
-footer img{
-  margin:0.5em 1em 0.5em 1em;
+footer img {
+  margin: 0.5em 1em 0.5em 1em;
   width: 10%;
 }
 
-footer p{
-  display:inline-block ;
+footer p {
+  display: inline-block;
 }
 
-.footerContact{
- color:white;
- display: flex;
- align-items: center;
- font-size: 100%; 
+.footerContact {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 100%;
 }
 
-@media screen and (max-width: 900px){
-  .footerContact:first-child{
-      justify-content: center;
+@media screen and (max-width: 900px) {
+  .footerContact:first-child {
+    justify-content: center;
   }
 
-  footer img{
-      margin:0.5em 0.5em 0.5em 0.5em;
-      width: 10%;
+  footer img {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    width: 10%;
   }
-
 }
 
 /*--------------------- JS Navbar ----------------------------*/
@@ -107,28 +105,28 @@ main {
   height: 400px;
   width: 400px;
   position: relative;
-   /* changement ici*/
-   display: flex;
-   flex-direction: row;
-   align-items: center;
- }
+  /* changement ici*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .slider_nav {
   position: absolute;
- /* changement ici */
- display: flex;
- flex-direction: row;
- justify-content: center;
+  /* changement ici */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .slider_nav_button {
   background-color: transparent;
   border: none;
-   }
+}
 
 .slider_nav_button--next {
- transform: translateX(+19em);
- }
+  transform: translateX(+19em);
+}
 
 /*.slider_nav_button--prev {
   position : absolute;
@@ -143,7 +141,7 @@ main {
   /*transform: translateY(+240%);*/
 }
 
-.slider_nav_button svg path{
+.slider_nav_button svg path {
   stroke: white;
 }
 
@@ -156,13 +154,11 @@ main {
   align-items: center;
   overflow: hidden;
   scroll-behavior: smooth;
-  
-  }
+}
 
 .slider_content_item {
   height: 100%;
   min-width: 100%;
- 
 }
 
 .slider_content_item img {
