@@ -19,11 +19,11 @@ body{
     left: calc((100vw - var(--dimensionPopup)) / 2);
     top: calc((var(--windowHeight) - var(--dimensionPopup)) / 2 + 5vh);
     background: rgba(255, 255, 255, 0.18);
-    border-radius: 50px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: calc(0.1 * var(--dimensionPopup));
+    box-shadow: 0 4px calc(0.03 * var(--dimensionPopup)) rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12.2px);
     -webkit-backdrop-filter: blur(12.2px);
-    border: 20px solid rgba(255, 255, 255, 0.3);
+    border: calc(0.03 * var(--dimensionPopup)) solid rgba(255, 255, 255, 0.3);
     animation: transformation 1s;
     animation-fill-mode: forwards;
     z-index: 7;    
@@ -117,7 +117,7 @@ body{
   }
 
   #popup div {
-    padding:2rem;
+    padding:calc(0.03 * var(--dimensionPopup));
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -126,16 +126,16 @@ body{
     max-width: 95%;
     background: rgba(0, 53, 63, 0.39);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px calc(0.03 * var(--dimensionPopup)) rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12.2px);
     -webkit-backdrop-filter: blur(12.2px);
-    border: 5px solid rgba(0, 53, 63, 0.1);
+    /* border: 5px solid rgba(0, 53, 63, 0.1); */
 
   }
 
 #popup div img {
-    max-width: 45%;
     height: auto;
+    width: 40%;
 }
 
   #fee {

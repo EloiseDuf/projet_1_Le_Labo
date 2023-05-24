@@ -1,3 +1,5 @@
+document.body.style.overflow = "hidden";
+
 //récupération de la largeur et la hauteur de la fenêntre du navigateur
 let largeurWindow=window.innerWidth;
 let hauteurWindow=window.innerHeight;
@@ -44,4 +46,5 @@ const popup = document.getElementById("popup");
 
 buttonPopup.addEventListener("click", () => {
     popup.style.display="none";
+    document.body.style.overflow = "auto";
 })
