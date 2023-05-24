@@ -2,10 +2,15 @@ const menuHamburger = document.querySelector(".menu-hamburger");
 const navLinks = document.querySelector(".nav-links");
 
 menuHamburger.addEventListener("click", () => {
-  if (navLinks.classList === "mobile-menu") {
-    document.body.style.overflow = "on";
+  navLinks.classList.toggle("mobile-menu");
+  
+  if (document.body.style.overflow === "hidden") {
+    document.body.style.overflow = "auto";
+    document.body.dataset.class === "pc-menu";
   } else {
     document.body.style.overflow = "hidden";
-    navLinks.classList.toggle("mobile-menu");
+    document.body.dataset.class === "mobile-menu";
   }
+  console.log(document.body);
 });
+
