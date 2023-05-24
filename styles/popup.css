@@ -98,7 +98,6 @@ body{
 
   #popup p {
     color: var(--lightColor);
-    font-style: italic;
     font-size: calc(0.05 * var(--dimensionPopup));
     text-align: center;
     
@@ -107,6 +106,7 @@ body{
   #popup1 {
     margin-top: calc(0.075 * var(--dimensionPopup));
     margin-bottom: calc(0.075 * var(--dimensionPopup));
+    font-style:italic;
   }
 
 
