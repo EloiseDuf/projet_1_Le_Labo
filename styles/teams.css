@@ -9,6 +9,7 @@
 
 main {  /* Determine les paramètres valables sur toute la page */
     background-color: var(--lightColor);
+    font-size: 1rem;
 }
 
 /* Mise en forme des titres */
@@ -22,6 +23,7 @@ h1 {    /* Mise en forme du h1 */
     align-items: center;
     border-radius: var(--borderRadiusMain);
     margin: 20px;
+    font-size: 1.8rem;
 }
 
 .container-right {
@@ -52,6 +54,7 @@ h1 {    /* Mise en forme du h1 */
     text-align: right;
     padding : 10px 25px 10px 0px;
     color: var(--mainColor);
+    font-size: 1.4rem;
 }
 
 .h2left { /* Mise en forme des h2 des docteurs à gauche */
@@ -61,7 +64,6 @@ h1 {    /* Mise en forme du h1 */
     color: var(--mainColor);
 }
 
-/* Mise en page des docteurs à gauche */
 .docteur {
     display: flex;
     align-items: center;
@@ -98,12 +100,6 @@ h1 {    /* Mise en forme du h1 */
     padding: 10px;
 }
 
-/* mise en page des docteurs à droite */
-
-
-
-
-
 /*footer*/
 
 footer {
@@ -129,4 +125,68 @@ footer p {
    display: flex;
    align-items: center;
    font-size: 100%; 
+}
+
+@media screen and (max-width: 900px) {
+    .container-right {
+        width: 90vw;
+    }
+    
+    .container-left {
+        width: 90vw;
+    }
+
+    .docteur img {
+        width: 150px;
+        height: auto;
+        border-radius: var(--borderRadiusMain);
+    }
+    
+    .docteur p {
+        width: 75vw;
+    }
+
+    .docteur {
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .docteur {
+        flex-direction: column;
+    }
+
+    .docteur p {
+        font-size: 1rem;
+    }
+
+    h1 {    /* Mise en forme du h1 */
+        font-size: 1.6rem;
+    }
+
+    .h2right {    /* Mise en forme des h2 des docteurs à droite */
+        font-size: 1.3rem;
+    }
+
+    .h2left {    /* Mise en forme des h2 des docteurs à droite */
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .docteur {
+        flex-direction: column;
+    }
+
+    .docteur p {
+        font-size: 1.15rem;
+    }
+
+    .container-right {
+        align-items: center;
+    }
+    
+    .container-left {
+        align-items: center;
+    }
 }
