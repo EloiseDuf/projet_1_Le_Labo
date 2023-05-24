@@ -86,7 +86,7 @@ h1 {    /* Mise en forme du h1 */
     align-items: center;
     height: 250px;
     width: 57vw;
-    padding-right: 10px;
+    padding: 0px 10px;
     border-top-left-radius: var(--borderRadiusMain);
     border-bottom-left-radius: var(--borderRadiusMain);
 }
