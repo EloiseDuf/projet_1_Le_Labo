@@ -3,8 +3,8 @@
     --lightColor:#F8FBF1;
     --mainColor : #00353F;
     --borderRadiusMain : 12px;
-    --colorDocRight : #BC632E;
-    --colorDocLeft : #FFBF66;
+    --colorDocRight : #bc622e54;
+    --colorDocLeft : #ffbf664f;
 }
 
 main {  /* Determine les paramètres valables sur toute la page */
