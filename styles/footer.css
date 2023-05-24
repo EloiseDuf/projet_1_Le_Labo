@@ -7,6 +7,10 @@ footer{
     padding: 0 3em;
 }
 
+footer a{
+    text-decoration: none;
+}
+
 footer img{
     margin:0.5em 1em 0.5em 1em;
     width: 13%;
@@ -20,7 +24,7 @@ footer p{
    color:white;
    display: flex;
    align-items: center;
-   font-size: 130%; 
+   font-size: 130%;
 }
 
 .footerContact img{
