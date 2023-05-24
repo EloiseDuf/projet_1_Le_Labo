@@ -3,8 +3,8 @@
     --lightColor:#F8FBF1;
     --mainColor : #00353F;
     --borderRadiusMain : 12px;
-    --colorDocRight : #BC632E;
-    --colorDocLeft : #FFBF66;
+    --colorDocRight : #bc622e54;
+    --colorDocLeft : #ffbf664f;
 }
 
 main {  /* Determine les paramètres valables sur toute la page */
@@ -24,14 +24,37 @@ h1 {    /* Mise en forme du h1 */
     margin: 20px;
 }
 
-#right {    /* Mise en forme des h2 des docteurs à droite */
+.container-right {
+    width: 80vw;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.container-left {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.h2right {    /* Mise en forme des h2 des docteurs à droite */
+    /* display: block; */
+    /* flex-direction: row-reverse; */
+    text-align: right;
     padding : 10px 25px 10px 0px;
     color: var(--mainColor);
 }
 
-#left { /* Mise en forme des h2 des docteurs à gauche */
+.h2left { /* Mise en forme des h2 des docteurs à gauche */
     display: flex;
     flex-direction: row;
     padding : 10px 0px 10px 25px;
@@ -39,57 +62,47 @@ h1 {    /* Mise en forme du h1 */
 }
 
 /* Mise en page des docteurs à gauche */
-.docteur-left {
+.docteur {
     display: flex;
-    flex-direction: row;
     align-items: center;
     flex-wrap: no-wrap;
-    margin: 10px;
-    background-color: var(--colorDocLeft);
+    /* margin: 10px; */
+    width: 60vw;
     border-radius: var(--borderRadiusMain);
+    gap: 20px;
 }
 
-.docteur-left img {
+.left {
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--colorDocLeft);
+}
+
+.right {
+    flex-direction: row-reverse;
+    background-color: var(--colorDocRight);
+    justify-content: flex-end;
+}
+
+.docteur img {
     width: 200px;
     height: auto;
     border-radius: var(--borderRadiusMain);
 }
 
-.docteur-left p {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.docteur p {
+    /* display: flex;
+    justify-content: left; */
+    text-align: justify;
     width: 75vw;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 /* mise en page des docteurs à droite */
-.docteur-right {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    flex-wrap: no-wrap;
-    margin: 10px;
-}
 
-.docteur-right img {
-    width: 200px;
-    height: auto;
-    min-height: 270px;
-    border-radius: var(--borderRadiusMain);
-}
 
-.docteur-right p {
-    background-color: var(--colorDocRight);
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 250px;
-    width: 57vw;
-    padding: 0px 10px;
-    border-top-left-radius: var(--borderRadiusMain);
-    border-bottom-left-radius: var(--borderRadiusMain);
-}
+
+
 
 /*footer*/
 
