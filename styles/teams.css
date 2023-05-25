@@ -7,27 +7,54 @@
     --colorDocLeft : #ffbf664f;
 }
 
-main {  /* Determine les paramètres valables sur toute la page */
+body {
     background-color: var(--lightColor);
-    font-size: 1rem;
+}
+
+main {  /* Determine les paramètres valables sur toute la page */
+    font-size: 0.7rem;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Mise en forme des titres */
-
 h1 {    /* Mise en forme du h1 */
-    color : var(--lightColor);
-    padding: 50px;
-    background-color: var(--mainColor);
-    display: flex;
+    color: var(--lightColor);
+    width: 75vw;
+    padding: 25px;
+    background-color: #00343fbb;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    text-align: center;
+    vertical-align: center;
     border-radius: var(--borderRadiusMain);
-    margin: 20px;
+    margin: 30px;
     font-size: 1.8rem;
 }
 
+#mainTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.h2right {    /* Mise en forme des h2 des docteurs à droite */
+    /* display: block; */
+    /* flex-direction: row-reverse; */
+    text-align: right;
+    padding : 10px 25px 10px 0px;
+    color: var(--mainColor);
+    font-size: 1.5rem;
+}
+
+.h2left { /* Mise en forme des h2 des docteurs à gauche */
+    display: flex;
+    flex-direction: row;
+    padding : 10px 0px 10px 25px;
+    color: var(--mainColor);
+    font-size: 1.5rem;
+}
 .container-right {
-    width: 80vw;
+    width: 75vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +65,7 @@ h1 {    /* Mise en forme du h1 */
 }
 
 .container-left {
-    width: 80vw;
+    width: 75vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,22 +73,6 @@ h1 {    /* Mise en forme du h1 */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-}
-
-.h2right {    /* Mise en forme des h2 des docteurs à droite */
-    /* display: block; */
-    /* flex-direction: row-reverse; */
-    text-align: right;
-    padding : 10px 25px 10px 0px;
-    color: var(--mainColor);
-    font-size: 1.4rem;
-}
-
-.h2left { /* Mise en forme des h2 des docteurs à gauche */
-    display: flex;
-    flex-direction: row;
-    padding : 10px 0px 10px 25px;
-    color: var(--mainColor);
 }
 
 .docteur {
@@ -78,17 +89,20 @@ h1 {    /* Mise en forme du h1 */
     flex-direction: row;
     justify-content: flex-start;
     background-color: var(--colorDocLeft);
+    width: 85%;
 }
 
 .right {
     flex-direction: row-reverse;
     background-color: var(--colorDocRight);
     justify-content: flex-end;
+    width: 85%;
 }
 
 .docteur img {
     width: 200px;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-radius: var(--borderRadiusMain);
 }
 
@@ -101,12 +115,8 @@ h1 {    /* Mise en forme du h1 */
 }
 
 @media screen and (max-width: 900px) {
-    .container-right {
-        width: 90vw;
-    }
-    
-    .container-left {
-        width: 90vw;
+    .right, .right {
+        width: 90%;
     }
 
     .docteur img {
@@ -127,6 +137,7 @@ h1 {    /* Mise en forme du h1 */
 @media screen and (max-width: 600px) {
     .docteur {
         flex-direction: column;
+        gap: 15px;
     }
 
     .docteur p {
@@ -137,29 +148,42 @@ h1 {    /* Mise en forme du h1 */
         font-size: 1.6rem;
     }
 
-    .h2right {    /* Mise en forme des h2 des docteurs à droite */
+    .h2right, .h2left {
         font-size: 1.3rem;
     }
 
-    .h2left {    /* Mise en forme des h2 des docteurs à droite */
-        font-size: 1.3rem;
+    .right, .right {
+        width: 95%;
     }
 }
 
 @media screen and (max-width: 400px) {
     .docteur {
         flex-direction: column;
+        gap: 10px;
     }
 
     .docteur p {
         font-size: 1.15rem;
     }
 
-    .container-right {
+    .container-right, .container-left {
         align-items: center;
     }
     
-    .container-left {
-        align-items: center;
+    h1 {    /* Mise en forme du h1 */
+        width: 95vw;
+        padding: 14px;
+        margin: 10px;
+        font-size: 1.40rem;
+    }
+
+    .h2right, .h2left {
+        padding : 10px 0px;
+        font-size: 1.3rem;
+    }
+
+    .right, .right {
+        width: 100%;
     }
 }
