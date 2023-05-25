@@ -52,7 +52,7 @@ html,
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #E5E5E5;
+    background-color: #F8FBF1;
 }
 
 .swiper {
@@ -79,7 +79,7 @@ html,
     justify-content: center;
     flex-direction: column;
     row-gap: 30px;
-    background-color: #E5E5E5;
+    background-color: #F8FBF1;
 }
 
 .swiper-slide p {
