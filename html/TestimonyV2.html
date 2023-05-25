@@ -33,192 +33,128 @@
 </body>
 </html>-->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../styles/TestimonyV2.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Demo styles
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../styles/TestimonyV2.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Link navBar -->
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <script type="module" src="../javascript/navbar.js"></script>
+  <title>Témoignages</title>
+</head>
 
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
+<body>
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
-  --></head>
-
-  <body>
-    <!-- Swiper -->
-    <section class="container">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class="image" src="../img/image1.jfif" alt="dr" />
-            <p>
-              Une clinique de transformation corporelle inégalée ! Je suis une
-              véritable adepte de la transformation corporelle et j'ai visité de
-              nombreuses cliniques, mais aucune n'a égalé la qualité et la
-              créativité du "labo". La chirurgie a été menée avec une expertise
-              inégalée et un souci du détail remarquable. Si vous êtes prêt à
-              repousser les limites de l'esthétique humaine, cette clinique est
-              tout simplement incontournable !
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Laure</span>
-              <span class="job">Egon</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="image" src="../img/image2.jpg" alt="dr" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-              quae ducimus. Autem, nisi? Eligendi accusamus necessitatibus,
-              molestias perspiciatis dolorum laboriosam facilis omnis tenetur
-              nam fugiat velit quas ullam. Voluptatum, modi!
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Lara</span>
-              <span class="job">Soft</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="image" src="../img/image3.jpg" alt="dr" />
-            <p>
-              Une nouvelle peau pour une nouvelle identité ! J'ai toujours été
-              attiré par les couleurs vives et éclatantes, alors quand j'ai
-              appris que la clinique de transformation corporelle pouvait
-              changer la couleur de ma peau, j'étais ravi. Après avoir discuté
-              avec les chirurgiens, j'ai opté pour une transformation audacieuse
-              et unique. Maintenant, ma peau est d'un bleu électrique
-              éblouissant et je me sens comme une véritable œuvre d'art vivante.
-              L'équipe médicale a été extrêmement professionnelle et à l'écoute
-              de mes besoins. Si vous cherchez à exprimer votre individualité à
-              travers une transformation de la peau, ne cherchez pas plus loin
-              que cette clinique !
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Emilie</span>
-              <span class="job">Joly</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="image" src="../img/image4.jpg" alt="dr" />
-            <p>
-              Une expérience angélique ! J'ai récemment subi une chirurgie à la
-              clinique de transformation corporelle et je ne pourrais être plus
-              heureuse. Grâce à eux, j'ai pu obtenir de magnifiques ailes
-              d'anges qui me font me sentir vraiment spécial. Je me suis
-              toujours senti attiré par la beauté et la grâce des anges, et
-              maintenant je peux les rejoindre dans le ciel. Le processus de
-              chirurgie s'est déroulé sans problème, avec une équipe médicale
-              compétente et bienveillante. Je recommande vivement cette clinique
-              pour toute personne intéressée par une transformation unique et
-              transcendante !
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Mathilde</span>
-              <span class="job">Plusdinspiration</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="image" src="../img/image5.jpg" alt="dr" />
-            <p>
-              Mon look diaboliquement génial ! J'ai toujours été fasciné par
-              l'esthétique sombre et mystérieuse des démons, alors j'ai décidé
-              de franchir le pas et de me faire implanter des cornes de diable à
-              la clinique de transformation corporelle. Je dois dire que le
-              résultat est incroyable ! Les chirurgiens ont été très
-              professionnels et ont su réaliser exactement ce que je voulais.
-              Maintenant, je me sens en phase avec ma vraie nature. Si vous êtes
-              à la recherche d'une transformation audacieuse et provocante,
-              cette clinique est définitivement l'endroit où aller !
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Serge</span>
-              <span class="job">Tank</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img class="image" src="../img/image6.jpg" alt="dr" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-              quae ducimus. Autem, nisi? Eligendi accusamus necessitatibus,
-              molestias perspiciatis dolorum laboriosam facilis omnis tenetur
-              nam fugiat velit quas ullam. Voluptatum, modi!
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Léo</span>
-              <span class="job">Simba</span>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-next nav-btn"></div>
-        <div class="swiper-button-prev nav-btn"></div>
-        <div class="swiper-pagination"></div>
+  <header>
+    <nav class="navbar">
+      <img id="logo" src="../img/Lelabo3.png" alt="Le Labo" />
+      <div class="nav-links">
+        <ul>
+          <li class="active"><a href="home.html">Accueil</a></li>
+          <li><a href="history.html">Histoire</a></li>
+          <li><a href="teams.html">L'équipe</a></li>
+          <li><a href="testimony.html">Témoignages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-    </section>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="../javascript/TestimonyV2.js"></script>
-  </body>
+      <img
+        src="../img/menu-btn.png"
+        alt="menu-hamburger"
+        class="menu-hamburger"
+      />
+    </nav>
+  </header>
+
+  <!-- Swiper -->
+<section class="container">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img class="image" src="../img/image1.jfif" alt="dr">
+             <p> Une clinique de transformation corporelle inégalée ! Si vous êtes prêt à repousser les limites de l'esthétique humaine, cette clinique est tout simplement incontournable !</p>
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+              <div class="details">
+                  <span class="name">Laure</span>                        
+                  <span class="job">Egon</span>
+              </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <img class="image" src="../img/image2.jpg" alt="dr">
+        <p> Je suis la meilleure version de moi ! Adepte des technologies de pointe, j'ai opté pour l'ajout d'implants afin d'améliorer mes capacités. La clinique a été exemplaire, je la recommande.</p>
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <div class="details">
+            <span class="name">Lara</span>                        
+            <span class="job">Soft</span>
+          </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <img class="image" src="../img/image3.jpg" alt="dr">
+        <p> Une nouvelle peau pour une nouvelle identité ! L'équipe médicale a été extrêmement professionnelle et à l'écoute de mes besoins. Si vous cherchez à exprimer votre individualité, ne cherchez pas plus loin que cette clinique !</p>
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <div class="details">
+            <span class="name">Emilie</span>                        
+            <span class="job">Joly</span>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <img class="image" src="../img/image4.jpg" alt="dr">
+        <p>  Une expérience angélique ! J'ai récemment subi une chirurgie à la clinique de transformation corporelle et je ne pourrais être plus heureuse. Je recommande vivement cette clinique pour toute personne intéressée par une transformation unique et transcendante !</p>
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <div class="details">
+            <span class="name">Mathilde</span>                        
+            <span class="job">Plusdinspiration</span>
+        </div>
+      </div>
+     
+      <div class="swiper-slide">
+        <img class="image" src="../img/image5.jpg" alt="dr">
+        <p> Mon look diaboliquement génial ! Si vous êtes à la recherche d'une transformation audacieuse et provocante, cette clinique est définitivement l'endroit où aller !</p>
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <div class="details">
+            <span class="name">Serge</span>                        
+            <span class="job">Tank</span>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <img class="image" src="../img/image6.jpg" alt="dr">
+        <p> Un look au poil ! L'équipe et les médecins étaient simplement génial. Leur profesionnalisme et la qualité du résultat ne sont plus à démontrer.</p>
+        <i class="bx bxs-quote-alt-left quote-icon"></i>
+        <div class="details">
+            <span class="name">Léo</span>                        
+            <span class="job">Simba</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="swiper-button-next nav-btn"></div>
+    <div class="swiper-button-prev nav-btn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<footer>
+  <div>
+    <img src="../img/icons8-instagram.svg" alt="icone instagram" />
+    <img src="../img/icons8-tic-tac.svg" alt="icone tic tac" />
+    <img src="../img/icons8-facebook-nouveau.svg" alt="icone facebook" />
+    <img src="../img/icons8-twitter.svg" alt="icone twitter" />
+  </div>
+  <div class="footerContact">
+    <p>Contactez nous !</p>
+    <img src="../img/icons8-ici-50.png" alt="icone here" />
+  </div>
+</footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="../javascript/TestimonyV2.js"></script>
+</body>
+
 </html>
