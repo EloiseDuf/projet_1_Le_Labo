@@ -6,26 +6,60 @@
   box-sizing: border-box;
 }
 
-.history,
-.team,
-.testimonials,
-.contact {
-  position: relative;
-  height: 30em;
-  width: auto;
-}
-.history img,
-.team img,
-.testimonials img,
-.contact img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  position: relative;
-  /* overflow:hidden; */
+.history{
+    background-image: url("/img/clinique_futurV2.png");
 }
 
+.team{
+    background-image: url("/img/team.jpg");
+}
+
+.testimonials{
+    background-image: url("/img/temoignages.jpg");
+}
+
+.contact{
+    background-image: url("/img/cornes_branchies.jpg");
+}
+
+ .team, .testimonials{
+    position: relative;
+    height: 40em;
+    width: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history{
+    position: relative;
+    height: 40em;
+    width: auto;
+    background-attachment: fixed;
+    background-position: 50% 40% !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact{
+    position: relative;
+    height: 40em;
+    width: auto;
+    background-attachment: fixed;
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history img, .team img, .testimonials img, .contact img{
+    width:100%;
+    height: 100%;
+    /*object-position: center;
+    /*position: relative;*/ 
+    object-fit: cover; 
+  }
+   
 /*
 .button{
     display: flex;
@@ -69,9 +103,15 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.9px);
   -webkit-backdrop-filter: blur(7.9px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  /* border: 1px solid rgba(255, 255, 255, 1); */
   z-index: 3;
   padding: 1rem;
+}
+
+.baliseH1 h1:hover{
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5);
 }
 
 .baliseIndicator {
@@ -134,40 +174,49 @@
   }
 }
 
-/*footer*/
+@media screen and (max-width: 900px){
 
-footer {
-  background-color: #00353f;
-  width: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2em;
-}
+     .team, .testimonials{
+        height: 20em;
+    }
 
-footer img {
-  margin: 0.5em 1em 0.5em 1em;
-  width: 10%;
-}
+    .history{
+        height: 20em; 
+    }
 
-footer p {
-  display: inline-block;
-}
+    .contact{
+        height: 20em;
+    }
 
-.footerContact {
-  color: white;
-  display: flex;
-  align-items: center;
-  font-size: 100%;
-}
+    .baliseH1 {
+        bottom: 5em;
+        font-size: 0.7rem;
+        /*text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black, 0 0 2px black;*/
+    }
+    
+    .baliseH1 h1{
+        padding:0.5rem;   
+    }
 
-@media screen and (max-width: 900px) {
-  .footerContact:first-child {
-    justify-content: center;
-  }
+    .indicator{
+        bottom: 1em;
+        margin-top: 22%;
+        width: 20px;
+        height: 20px;
+    }
 
-  footer img {
-    margin: 0.5em 0.5em 0.5em 0.5em;
-    width: 10%;
-  }
+    .indicator span:nth-child(1){
+        top: -15px;
+        left: -15px;
+    }
+    
+    .indicator span:nth-child(2){
+        top: -7px;
+        left: -7px;
+    }
+    
+    .indicator span:nth-child(3){
+        top: 0px;
+        left: 0px;
+    }
 }
