@@ -5,16 +5,13 @@ html,
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    
-    }
-
-    body {
       background: #eee;
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
       color: #000;
       margin: 0;
       padding: 0;
+      background-color: #F8FBF1;
     }
 
      .swiper-slide {
@@ -138,4 +135,41 @@ color: #fff;
 }
 .nav-btn:hover{
   background-color: rgba(0, 0, 0, 0.2)
+}
+/*-----------------------FOOTER------------------------------*/
+footer {
+  background-color: #00353f;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  margin-top: 2em;
+}
+
+footer img {
+  margin: 0.5em 1em 0.5em 1em;
+  width: 10%;
+}
+
+footer p {
+  display: inline-block;
+}
+
+.footerContact {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .footerContact:first-child {
+    justify-content: center;
+  }
+
+  footer img {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    width: 10%;
+  }
 }

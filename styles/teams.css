@@ -1,17 +1,20 @@
-:root{/* Variable que l'on utilisera sur toute la page */
+:root {/* Variable que l'on utilisera sur toute la page */
     --darkColor:#00334A;
     --lightColor:#F8FBF1;
-    --mediumColor:#ffbf664a;
     --mainColor : #00353F;
-    box-sizing: content-box;
     --borderRadiusMain : 12px;
+    --colorDocRight : #bc622e54;
+    --colorDocLeft : #ffbf664f;
 }
 
-main {  /* Determine la couleur de la police sur toute la page */
+main {  /* Determine les paramètres valables sur toute la page */
     background-color: var(--lightColor);
+    font-size: 1rem;
 }
 
-h1 {    /* Mise en forme du titre */
+/* Mise en forme des titres */
+
+h1 {    /* Mise en forme du h1 */
     color : var(--lightColor);
     padding: 50px;
     background-color: var(--mainColor);
@@ -19,106 +22,171 @@ h1 {    /* Mise en forme du titre */
     justify-content: center;
     align-items: center;
     border-radius: var(--borderRadiusMain);
-}
-
-.leftside, .rightside {     /* Mise en page des titre h2 => nom des docteurs */
-    color: var(--mainColor); /* Invisible car test en cours ... */
-    background-color: var(--lightColor); /* pour test */
-    padding: 15px;
     margin: 20px;
+    font-size: 1.8rem;
 }
 
-.rightside {    /* Mise en page des nom des docteur (titre h2) de droite à droite */
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    height: 50px;
-    /* color: #ff00f7; Pour test, a supprimer */
-    background-color: #069fd2;
-}
-
-.leftside {     /* Mise en page des nom des docteur (titre h2) de gauche à gauche */
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    width: 270px;
-    color: #0cc7e4; /* Pour test, a supprimer */
-}
-
-.image {    /* Resize de la taille des images des docteurs */
-    width : 50%;
-    border-radius: 12px;
-    aspect-ratio: 3/2;
-    object-fit: contain;
-}
-
-.docteur + .rightside {   /* Mise en pages des docteurs du coté droit */
-    background-color: #2bc40d; /* Le fond englobe le texte ET la photo, comme pour les docs à gauche */
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: right;
-}
-
-.docteur:nth-child(odd) {   /* Mise en pages des docteurs à gauche */
-    /* background-color: #08f400;
-    border-radius: 10px; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: var(--borderRadiusMain);
-    padding: 10px;
-    margin: 0px 0px 20px 0px;
-    height: 400px;
-}
-
-.docteur:nth-child(even) {  /* Mise en pages des docteurs à gauche */
-    /* background-color: #BC632E;
-    border-radius: 10px; */
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin: 0px 0px 20px 0px;
-    height: 400px;
-}
-
-.docteur + h2 {
-justify-content: right;
-background-color: #cfd311;
-}
-
-.docteur > p {
-    padding: 10px;
-}
-
-.rightside > p {    /* Mise en forme des paragraphes à droite */
-    padding: 15px;
-    background-color: #BC632E;
-    width: 75vw;
-    height: 10vh;
-    border-radius: 12px;
-}
-
-.docteur > p {  /* Mise en forme des descriptions </p> */
-    padding: 15px;
-    background-color: #cfd311;  /* test pour voir zone effet, à supprimer */
-    width: 75vw; /* Permet d'avoir ce paragraphe de la meme taille que celui de droite */
-    height: 10vh;
-}
-
-.poulet {
+.container-right {
+    width: 80vw;
     display: flex;
     flex-direction: column;
-    justify-content: right;
-    height: 400px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 
-/* .docteur {
+.container-left {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.h2right {    /* Mise en forme des h2 des docteurs à droite */
+    /* display: block; */
+    /* flex-direction: row-reverse; */
+    text-align: right;
+    padding : 10px 25px 10px 0px;
+    color: var(--mainColor);
+    font-size: 1.4rem;
+}
+
+.h2left { /* Mise en forme des h2 des docteurs à gauche */
+    display: flex;
+    flex-direction: row;
+    padding : 10px 0px 10px 25px;
+    color: var(--mainColor);
+}
+
+.docteur {
     display: flex;
     align-items: center;
+    flex-wrap: no-wrap;
+    /* margin: 10px; */
+    width: 60vw;
+    border-radius: var(--borderRadiusMain);
+    gap: 20px;
 }
 
-.doc {
-    height: 100vh;
-} */
+.left {
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--colorDocLeft);
+}
+
+.right {
+    flex-direction: row-reverse;
+    background-color: var(--colorDocRight);
+    justify-content: flex-end;
+}
+
+.docteur img {
+    width: 200px;
+    height: auto;
+    border-radius: var(--borderRadiusMain);
+}
+
+.docteur p {
+    /* display: flex;
+    justify-content: left; */
+    text-align: justify;
+    width: 75vw;
+    padding: 10px;
+}
+
+/*footer*/
+
+footer {
+    background-color: #00353F;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+footer img {
+    margin:0.5em 1em 0.5em 1em;
+    width: 10%;
+}
+
+footer p {
+    display:inline-block ;
+}
+
+.footerContact {
+   color:white;
+   display: flex;
+   align-items: center;
+   font-size: 100%; 
+}
+
+@media screen and (max-width: 900px) {
+    .container-right {
+        width: 90vw;
+    }
+    
+    .container-left {
+        width: 90vw;
+    }
+
+    .docteur img {
+        width: 150px;
+        height: auto;
+        border-radius: var(--borderRadiusMain);
+    }
+    
+    .docteur p {
+        width: 75vw;
+    }
+
+    .docteur {
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .docteur {
+        flex-direction: column;
+    }
+
+    .docteur p {
+        font-size: 1rem;
+    }
+
+    h1 {    /* Mise en forme du h1 */
+        font-size: 1.6rem;
+    }
+
+    .h2right {    /* Mise en forme des h2 des docteurs à droite */
+        font-size: 1.3rem;
+    }
+
+    .h2left {    /* Mise en forme des h2 des docteurs à droite */
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .docteur {
+        flex-direction: column;
+    }
+
+    .docteur p {
+        font-size: 1.15rem;
+    }
+
+    .container-right {
+        align-items: center;
+    }
+    
+    .container-left {
+        align-items: center;
+    }
+}
