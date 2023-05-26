@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    
+    }
+
+    body {
+      background: #eee;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+     .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+/*Demo styles
+
+
+/*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E5E5;
+}
+
+.swiper {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.swiper .image {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.swiper .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: #E5E5E5;
+}
+
+.swiper-slide p {
+    padding: 0 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.swiper-slide .quote-icon{
+    font-size: 30px;
+    color: #00353f;
+}
+.swiper-slide .details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.swiper-button-next .swiper-button-prev .swiper-pagination {
+  color: #00353f;
+}
+
+.details .name{
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.details .job {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+}
+
+.nav-btn {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translateY(30px);
+  transition: 0.2s;
+}
+
+.nav-btn::after, .nav-btn::before  {
+font-size: 20px;
+color: #fff;
+}
+
+.swiper-pagination-bullet{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.swiper-pagination-bullet-active{
+  background-color:  #00353f;
+}
+.nav-btn:hover{
+  background-color: rgba(0, 0, 0, 0.2)
+}
