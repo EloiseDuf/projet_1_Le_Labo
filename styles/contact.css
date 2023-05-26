@@ -5,7 +5,7 @@
     --widthContainer:80vw;
     --fontSizeInput:.8rem;
     --paddingContainer:calc(var(--heightInput)/2);
-    --widthLargeInput:calc(var(--widthContainer) - 2 * var(--paddingContainer));
+    --widthLargeInput:calc(var(--widthContainer) - 4 * var(--paddingContainer));
     --marginBottom: var(--heightInput);
     --darkColor:#00353F;
     --lightColor:#F8FBF1;
@@ -66,6 +66,7 @@ align-items: center;
 flex-wrap: wrap;
 border-radius: calc(var(--heightInput) / 4);
 margin-bottom: var(--marginBottom);
+padding: calc(0.5 * var(--paddingContainer));
 }
 
 #coordonnees {
@@ -172,7 +173,11 @@ label {
     background-color: var(--darkColor);
     color: white;
     font-weight: bold;
-    
+    cursor: pointer;
+}
+
+#envoyer:hover {
+    box-shadow: 5px 5px 5px gray;
 }
 
 
