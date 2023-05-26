@@ -1,150 +1,144 @@
-:root{
-    --lightColor:#00353f;
-    --mediumColor:#D9D9D9;
-    --dimensionPopup:0px;
-    --windowHeight:15vh;
+:root {
+  --lightColor: #00353f;
+  --mediumColor: #d9d9d9;
+  --dimensionPopup: 0px;
+  --windowHeight: 15vh;
 }
 
-
-body{
-    position: relative;
+body {
+  position: relative;
 }
 
 #popup {
-    /* width: 40vw;
+  /* width: 40vw;
     height: 40vw; */
-    width: var(--dimensionPopup);
-    height: var(--dimensionPopup);
-    position: absolute;
-    left: calc((100vw - var(--dimensionPopup)) / 2);
-    top: calc((var(--windowHeight) - var(--dimensionPopup)) / 2 + 5vh);
-    background: rgba(255, 255, 255, 0.18);
-    border-radius: calc(0.1 * var(--dimensionPopup));
-    box-shadow: 0 4px calc(0.03 * var(--dimensionPopup)) rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12.2px);
-    -webkit-backdrop-filter: blur(12.2px);
-    border: calc(0.03 * var(--dimensionPopup)) solid rgba(255, 255, 255, 0.3);
-    animation: transformation 1s;
-    animation-fill-mode: forwards;
-    z-index: 7;    
-
+  width: var(--dimensionPopup);
+  height: var(--dimensionPopup);
+  position: absolute;
+  left: calc((100vw - var(--dimensionPopup)) / 2);
+  top: calc((var(--windowHeight) - var(--dimensionPopup)) / 2 + 5vh);
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: calc(0.1 * var(--dimensionPopup));
+  box-shadow: 0 4px calc(0.03 * var(--dimensionPopup)) rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.2px);
+  -webkit-backdrop-filter: blur(12.2px);
+  border: calc(0.03 * var(--dimensionPopup)) solid rgba(255, 255, 255, 0.3);
+  animation: transformation 1s;
+  animation-fill-mode: forwards;
+  z-index: 7;
 }
 
 @keyframes transformation {
-    0%{
+  0% {
     transform: scale(0.1);
-    }
-    100%{
-      transform:scale(1);
-    }
   }
+  100% {
+    transform: scale(1);
+  }
+}
 
-  #buttonPopup {
-    position: absolute;
-    top: calc(0.83 * var(--dimensionPopup));;
-    left: calc(0.75 * var(--dimensionPopup));;
-    width: calc(0.18 * var(--dimensionPopup));;
-    height: calc(0.1 * var(--dimensionPopup));;
-    clip-path: polygon(0% 42%, 61% 42%, 39% 10%, 100% 52%, 40% 100%, 60% 65%, 0% 65%);
-    cursor: pointer;
-    
-    background:linear-gradient(90deg, rgb(218, 195, 158) 4%, rgba(5,40,79,1) 37%, rgba(255,255,255,1) 39%, rgba(5,40,79,1) 41%, rgb(218, 195, 158) 88%);
+#buttonPopup {
+  position: absolute;
+  top: calc(0.83 * var(--dimensionPopup));
+  left: calc(0.75 * var(--dimensionPopup));
+  width: calc(0.18 * var(--dimensionPopup));
+  height: calc(0.1 * var(--dimensionPopup));
+  clip-path: polygon(
+    0% 42%,
+    61% 42%,
+    39% 10%,
+    100% 52%,
+    40% 100%,
+    60% 65%,
+    0% 65%
+  );
+  cursor: pointer;
 
-    background-clip:content-box;
-    /*add this line, it defines how far the background should extend within an element, here we set it to text */
+  background: linear-gradient(
+    90deg,
+    rgb(218, 195, 158) 4%,
+    rgba(5, 40, 79, 1) 37%,
+    rgba(255, 255, 255, 1) 39%,
+    rgba(5, 40, 79, 1) 41%,
+    rgb(218, 195, 158) 88%
+  );
 
-    -webkit-background-clip: content-box;
-    /* add this line, for browsers compatibility */
+  background-clip: content-box;
+  /*add this line, it defines how far the background should extend within an element, here we set it to text */
 
-    -webkit-text-fill-color: transparent;
-    /* specifies the fill color of text characters. We use transparent to use the background value as our text fill */
+  -webkit-background-clip: content-box;
+  /* add this line, for browsers compatibility */
 
-    animation: wave 60s  alternate  infinite;
-    /* add this line */
-    /* transition: all ease 0.5s ; */
-    /* add this line */
+  -webkit-text-fill-color: transparent;
+  /* specifies the fill color of text characters. We use transparent to use the background value as our text fill */
 
-    transition-timing-function: linear;
-    }
+  animation: wave 60s alternate infinite;
+  /* add this line */
+  /* transition: all ease 0.5s ; */
+  /* add this line */
 
-  
-
+  transition-timing-function: linear;
+}
 
 @keyframes wave {
- 0% {
-   background-position: 0 0;
- }
- 100% {
-   background-position: 150vw 5vh;
- }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 150vw 5vh;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #buttonPopup:hover {
-    background-color:  rgb(218, 195, 158) ;
-  }
-
-  #popup p {
-    color: var(--lightColor);
-    font-size: calc(0.05 * var(--dimensionPopup));
-    text-align: center;
-    
-  }
-
-  #popup1 {
-    margin-top: calc(0.075 * var(--dimensionPopup));
-    margin-bottom: calc(0.075 * var(--dimensionPopup));
-    font-style:italic;
-  }
-
-
- #popup #rejoindre {
-    text-align: left;
-    margin-top: calc(0.075 * var(--dimensionPopup));
-    margin-left: calc(0.33 * var(--dimensionPopup));
-  }
-
-  #popup div {
-    padding:calc(0.03 * var(--dimensionPopup));
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    margin-bottom: calc(0.075 * var(--dimensionPopup));
-    max-width: 95%;
-    background: rgba(0, 53, 63, 0.39);
-    border-radius: 16px;
-    box-shadow: 0 4px calc(0.03 * var(--dimensionPopup)) rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12.2px);
-    -webkit-backdrop-filter: blur(12.2px);
-    /* border: 5px solid rgba(0, 53, 63, 0.1); */
-
-  }
-
-#popup div img {
-    height: auto;
-    width: 40%;
+  background-color: rgb(218, 195, 158);
 }
 
-  #fee {
-    max-height: calc(0.3 * var(--dimensionPopup));
-    border-radius: calc(0.025 * var(--dimensionPopup));
-    /* max-width: 45%; */
-  }
+#popup p {
+  color: var(--lightColor);
+  font-size: calc(0.05 * var(--dimensionPopup));
+  text-align: center;
+}
 
-  #logopopup {
-    max-height: calc(0.15 * var(--dimensionPopup));
-    /* max-width: 45%; */
-  }
+#popup1 {
+  margin-top: calc(0.075 * var(--dimensionPopup));
+  margin-bottom: calc(0.075 * var(--dimensionPopup));
+  font-style: italic;
+}
+
+#popup #rejoindre {
+  text-align: left;
+  margin-top: calc(0.095 * var(--dimensionPopup));
+  margin-left: calc(0.33 * var(--dimensionPopup));
+}
+
+#popup div {
+  padding: calc(0.03 * var(--dimensionPopup));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: calc(0.075 * var(--dimensionPopup));
+  max-width: 95%;
+  background: rgba(0, 53, 63, 0.39);
+  border-radius: 16px;
+  box-shadow: 0 4px calc(0.03 * var(--dimensionPopup)) rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.2px);
+  -webkit-backdrop-filter: blur(12.2px);
+  /* border: 5px solid rgba(0, 53, 63, 0.1); */
+}
+
+#popup div img {
+  height: auto;
+  width: 40%;
+}
+
+#fee {
+  max-height: calc(0.3 * var(--dimensionPopup));
+  border-radius: calc(0.025 * var(--dimensionPopup));
+  /* max-width: 45%; */
+}
+
+#logopopup {
+  max-height: calc(0.15 * var(--dimensionPopup));
+  /* max-width: 45%; */
+}
