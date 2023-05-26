@@ -1,0 +1,215 @@
+:root {
+  /* Variable que l'on utilisera sur toute la page */
+  --darkColor: #00334a;
+  --lightColor: #f8fbf1;
+  --mainColor: #00353f;
+  --borderRadiusMain: 12px;
+  --colorDocRight: #bc622e54;
+  --colorDocLeft: #ffbf664f;
+}
+
+body {
+  background-color: var(--lightColor);
+}
+
+main {
+  /* Determine les paramètres valables sur toute la page */
+  font-size: 0.7rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Mise en forme des titres */
+h1 {
+  /* Mise en forme du h1 */
+  color: var(--lightColor);
+  width: 75vw;
+  padding: 25px;
+  background-color: #00343fbb;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  text-align: center;
+  vertical-align: center;
+  border-radius: var(--borderRadiusMain);
+  margin: 30px;
+  font-size: 1.8rem;
+}
+
+span p {
+  font-weight: bolder;
+}
+
+#mainTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.h2right {
+  /* Mise en forme des h2 des docteurs à droite */
+  /* display: block; */
+  /* flex-direction: row-reverse; */
+  text-align: right;
+  padding: 10px 25px 10px 0px;
+  color: var(--mainColor);
+  font-size: 1.5rem;
+}
+
+.h2left {
+  /* Mise en forme des h2 des docteurs à gauche */
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px 10px 25px;
+  color: var(--mainColor);
+  font-size: 1.5rem;
+}
+.container-right {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.container-left {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.docteur {
+  display: flex;
+  align-items: center;
+  flex-wrap: no-wrap;
+  /* margin: 10px; */
+  width: 60vw;
+  border-radius: var(--borderRadiusMain);
+  gap: 20px;
+}
+
+.left {
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: var(--colorDocLeft);
+  width: 95%;
+}
+
+.right {
+  flex-direction: row-reverse;
+  background-color: var(--colorDocRight);
+  justify-content: flex-end;
+  width: 95%;
+}
+
+.docteur img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--borderRadiusMain);
+}
+
+.docteur p {
+  /* display: flex;
+    justify-content: left; */
+  text-align: justify;
+  width: 75vw;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+  .right,
+  .left {
+    width: 90%;
+  }
+
+  .docteur img {
+    width: 150px;
+    height: auto;
+    border-radius: var(--borderRadiusMain);
+  }
+
+  .docteur p {
+    width: 75vw;
+  }
+
+  .docteur {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-right,
+  .container-left {
+    width: 90vw;
+    align-items: center;
+  }
+
+  .docteur {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .docteur p {
+    font-size: 1rem;
+    width: 85vw;
+  }
+
+  h1 {
+    /* Mise en forme du h1 */
+    font-size: 1.6rem;
+  }
+
+  .h2right,
+  .h2left {
+    font-size: 1.3rem;
+    padding: 10px 0px;
+  }
+
+  .right,
+  .left {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .docteur {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .docteur p {
+    font-size: 1.15rem;
+  }
+
+  .container-right,
+  .container-left {
+    align-items: center;
+  }
+
+  h1 {
+    /* Mise en forme du h1 */
+    width: 95vw;
+    padding: 14px;
+    margin: 10px;
+    font-size: 1.4rem;
+  }
+
+  .h2right,
+  .h2left {
+    padding: 10px 0px;
+    font-size: 1.3rem;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+  }
+}
