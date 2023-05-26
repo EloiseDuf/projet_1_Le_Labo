@@ -1,63 +1,71 @@
-footer{
-    background-color: #00353F;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 3em;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+footer {
+  background-color: #00353f;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3em;
 }
 
-footer a{
-    text-decoration: none;
+footer a {
+  text-decoration: none;
 }
 
-footer img{
-    margin:0.5em 1em 0.5em 1em;
-    width: 13%;
+footer img {
+  margin: 0.5em 1em 0.5em 1em;
+  width: 13%;
 }
 
-footer p{
-    display:inline-block ;
+footer p {
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
-.footerContact{
-   color:white;
-   display: flex;
-   align-items: center;
-   font-size: 130%;
+.footerContact {
+  color: white;
+  display: flex;
+  align-items: center;
+  /*font-size: 130%;*/
 }
 
-.footerContact img{
-    width:15%;
+.footerContact img {
+  width: 15%;
 }
 
-footer img:hover{
-    transform : rotate(30deg);
+footer img:hover {
+  transform: rotate(30deg);
 }
 
-.footerContact:first-child{
+.footerContact:first-child {
+  justify-content: center;
+  font-size: 200%;
+}
+
+.footerContact:first-child:hover {
+  color: #e5bc1a;
+}
+
+@media screen and (max-width: 900px) {
+  .footerContact:first-child {
     justify-content: center;
-    font-size: 200%;
+  }
+
+  footer img {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    width: 10%;
+  }
 }
 
-.footerContact:first-child:hover{
-        color: #e5bc1a;
-}
+@media screen and (max-width: 600px) {
+  .footerContact:first-child {
+    justify-content: center;
+    font-size: 100%;
+  }
 
-@media screen and (max-width: 900px){
-    .footerContact:first-child{
-        justify-content: center;
-    }
-
-    footer img{
-        margin:0.5em 0.5em 0.5em 0.5em;
-        width: 10%;
-    } 
-}
-
-@media screen and (max-width: 600px){
-    .footerContact:first-child{
-        justify-content: center;
-        font-size: 100%;
-    }
+  .footerContact p {
+    font-size: 15px;
+  }
 }
